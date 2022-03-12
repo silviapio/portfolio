@@ -6,6 +6,10 @@ module.exports = {
         inconsolata: ["Inconsolata", "monospace"],
         notosans: ["Noto Sans", "sans-serif"],
       },
+      colors: {
+        "bright-red": "var(--bright-red)",
+        "dark-slate": "var(--dark-slate)",
+      },
     },
   },
   plugins: [],

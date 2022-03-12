@@ -1,8 +1,10 @@
 export const Navbar = () => (
-  <ul>
-    <li>about</li>
-    <li>projects</li>
-    <li>skills</li>
-    <li>contact</li>
-  </ul>
+  <>
+    <ul className="flex">
+      <li>about</li>
+      <li>projects</li>
+      <li>skills</li>
+      <li>contact</li>
+    </ul>
+  </>
 );

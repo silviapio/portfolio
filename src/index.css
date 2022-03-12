@@ -19,3 +19,9 @@
     @apply h-full;
   }
 }
+
+:root {
+  --bright-red: #fa2742;
+  --dark-slate: #373833;
+  --light-slate: #f1f5f9;
+}

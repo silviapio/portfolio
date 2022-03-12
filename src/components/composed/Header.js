@@ -1,10 +1,11 @@
 import { Navbar } from "../units/Navbar";
+import { BurgerMenu } from "../units/BurgerMenu";
 
 export const Header = () => {
   return (
-    <header>
+    <header className="flex justify-between">
       <div>{"{silvia}"}</div>
-      <Navbar />
+      {/* <Navbar /> */}
     </header>
   );
 };
