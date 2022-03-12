@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;700&family=Noto+Sans:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-notosans;
+    @apply w-full;
+    @apply h-full;
+  }
+  body {
+    @apply bg-slate-100;
+    @apply w-full;
+    @apply h-full;
+  }
+  #root {
+    @apply h-full;
+  }
+}
