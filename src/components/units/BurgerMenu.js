@@ -6,7 +6,7 @@ var styles = {
     width: "34px",
     height: "30px",
     right: "1rem",
-    top: "1rem",
+    top: "1.25rem",
   },
   bmBurgerBars: {
     background: "var(--dark-slate)",

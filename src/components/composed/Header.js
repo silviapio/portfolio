@@ -1,11 +1,13 @@
+import { useMediaQuery } from "react-responsive";
 import { Navbar } from "../units/Navbar";
-import { BurgerMenu } from "../units/BurgerMenu";
 
 export const Header = () => {
+  const isTabletOrLarger = useMediaQuery({ query: "(min-width: 640px)" });
+
   return (
-    <header className="flex justify-between">
-      <div>{"{silvia}"}</div>
-      {/* <Navbar /> */}
+    <header className="flex justify-between p-4 font-bold">
+      <h1 className="font-inconsolata text-4xl text-bright-red">{"{silvia}"}</h1>
+      {isTabletOrLarger && <Navbar />}
     </header>
   );
 };
