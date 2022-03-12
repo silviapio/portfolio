@@ -45,8 +45,13 @@ var styles = {
 };
 
 export const BurgerMenu = () => {
+  const toggleMenuAria = ({ isOpen }) => {
+    const menuWrap = document.querySelector(".bm-menu-wrap");
+    isOpen ? menuWrap.setAttribute("aria-hidden", false) : menuWrap.setAttribute("aria-hidden", true);
+  };
+
   return (
-    <Menu right styles={styles}>
+    <Menu onStateChange={toggleMenuAria} right styles={styles}>
       <a className="menu-item" href="#about">
         about
       </a>
