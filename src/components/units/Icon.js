@@ -1,7 +1,7 @@
 import { IconContext } from "react-icons";
 
-export const Icon = ({ children, color, altText: title }) => (
-  <IconContext.Provider value={{ color, title }}>
+export const Icon = ({ children, color, altText: title, className }) => (
+  <IconContext.Provider value={{ color, title, className }}>
     <div>{children}</div>
   </IconContext.Provider>
 );
