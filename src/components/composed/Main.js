@@ -9,10 +9,10 @@ export const Main = () => {
     <main className="flex flex-col m-4 items-start">
       <Hero />
       <section className="my-8 self-center">
-        <SectionTitle titleText="skills" />
+        <SectionTitle titleText="...skills" />
         <SkillsSection />
       </section>
-      <Section titleText="about" bodyText={about} />
+      <Section titleText="...about" bodyText={about} />
     </main>
   );
 };
