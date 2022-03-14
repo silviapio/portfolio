@@ -115,8 +115,15 @@ export const SkillsSection = () => {
     },
   ];
 
-  const skills = skillsData.map(({ icon, skillText, altText, color, textColor, className }) => (
-    <Skill skillText={skillText} altText={altText} color={color} textColor={textColor} className={className}>
+  const skills = skillsData.map(({ icon, skillText, altText, color, textColor, className }, index) => (
+    <Skill
+      key={index}
+      skillText={skillText}
+      altText={altText}
+      color={color}
+      textColor={textColor}
+      className={className}
+    >
       {icon()}
     </Skill>
   ));

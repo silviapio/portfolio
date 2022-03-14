@@ -1,8 +1,8 @@
 import { Hero } from "./Hero";
 import { SectionTitle } from "../units/SectionTitle";
-import { Section } from "./Section";
+import { TextSection } from "./TextSection";
 import { SkillsSection } from "./SkillsSection";
-import { about } from "../../assets/copy_draft";
+import { about } from "../../copy_draft";
 
 export const Main = () => {
   return (
@@ -12,7 +12,9 @@ export const Main = () => {
         <SectionTitle titleText="...skills" />
         <SkillsSection />
       </section>
-      <Section titleText="...about" bodyText={about} />
+      <TextSection titleText="...about" bodyText={about}>
+        <p className="px-2 text-bright-red text-lg font-semibold">Why should you want a Junior in your team?</p>
+      </TextSection>
     </main>
   );
 };
