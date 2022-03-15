@@ -23,8 +23,9 @@
 :root {
   --bright-red: #fa2742;
   --bright-red-text: #e50624;
+  --bright-red-bg: #e00623;
   --dark-slate: #373833;
-  --light-slate: #f8fafc;
+  --light-slate: #f8fafc; /* slate-50 */
   --js-yellow: #f7df1e;
   --react-blue: #61dafb;
   --html-red: #e34f26;

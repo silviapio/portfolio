@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         "bright-red": "var(--bright-red)",
         "bright-red-text": "var(--bright-red-text)",
+        "bright-red-bg": "var(--bright-red-bg)",
         "dark-slate": "var(--dark-slate)",
         "js-yellow": "var(--js-yellow)",
         "react-blue": "var(--react-blue)",
