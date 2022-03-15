@@ -20,8 +20,8 @@ export const Modal = ({ handleClose }) => {
   ];
 
   const listItems = bulletPoints.map((item, index) => (
-    <li className="flex flex-row items-start">
-      <Icon key={index} className="mt-1 mr-2" color="var(--bright-red)" altText="light-bulb">
+    <li key={index} className="flex flex-row items-start">
+      <Icon className="mt-1 mr-2" color="var(--bright-red)" altText="light-bulb">
         <HiOutlineLightBulb />
       </Icon>
       <p>{item}</p>

@@ -11,7 +11,7 @@
     @apply h-full;
   }
   body {
-    @apply bg-slate-100;
+    @apply bg-slate-50;
     @apply w-full;
     @apply h-full;
   }
@@ -22,8 +22,9 @@
 
 :root {
   --bright-red: #fa2742;
+  --bright-red-text: #e50624;
   --dark-slate: #373833;
-  --light-slate: #f1f5f9;
+  --light-slate: #f8fafc;
   --js-yellow: #f7df1e;
   --react-blue: #61dafb;
   --html-red: #e34f26;

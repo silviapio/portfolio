@@ -54,7 +54,7 @@ export const SkillsSection = () => {
       skillText: "Redux",
       altText: "Redux",
       color: "light-slate",
-      textColor: "text-slate-100",
+      textColor: "text-slate-50",
       className: "bg-redux-purple font-medium",
     },
     {
@@ -70,7 +70,7 @@ export const SkillsSection = () => {
       skillText: "CSS 3",
       altText: "CSS 3",
       color: "light-slate",
-      textColor: "text-slate-100",
+      textColor: "text-slate-50",
       className: "bg-css-blue font-medium",
     },
     {
@@ -78,7 +78,7 @@ export const SkillsSection = () => {
       skillText: "styled-components",
       altText: "styled-components",
       color: "light-slate",
-      textColor: "text-slate-100",
+      textColor: "text-slate-50",
       className: "bg-styledcomp-pink font-medium",
     },
     {
@@ -94,7 +94,7 @@ export const SkillsSection = () => {
       skillText: "C",
       altText: "C",
       color: "light-slate",
-      textColor: "text-slate-100",
+      textColor: "text-slate-50",
       className: "bg-c-gray font-medium",
     },
     {
@@ -102,7 +102,7 @@ export const SkillsSection = () => {
       skillText: "MySQL",
       altText: "MySQL",
       color: "light-slate",
-      textColor: "text-slate-100",
+      textColor: "text-slate-50",
       className: "bg-mysql-blue font-medium",
     },
     {
@@ -110,7 +110,7 @@ export const SkillsSection = () => {
       skillText: "Figma",
       altText: "Figma",
       color: "light-slate",
-      textColor: "text-slate-100",
+      textColor: "text-slate-50",
       className: "bg-figma-red font-medium",
     },
   ];

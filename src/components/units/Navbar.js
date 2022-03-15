@@ -10,7 +10,7 @@ export const Navbar = () => (
       <li className="px-2">
         <a href="#projects">projects</a>
       </li>
-      <li className="px-2 bg-bright-red rounded text-slate-100">
+      <li className="px-2 bg-bright-red rounded text-slate-50">
         <a href="#contact">contact</a>
       </li>
     </ul>
