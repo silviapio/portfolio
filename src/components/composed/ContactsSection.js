@@ -6,10 +6,10 @@ import { SiLinkedin, SiTwitter, SiGithub } from "react-icons/si";
 
 export const ContactSection = () => {
   return (
-    <div>
+    <div className="w-full flex flex-col items-start">
       <SectionTitle titleText="...contacts" />
       <div>
-        <p className="text-lg mb-4">Which type are you?</p>
+        <p className="text-lg mb-2">Which type are you?</p>
         <div className="flex flex-row items-center">
           <Icon className="mt-[1px] w-[18px] h-[18px]">
             <AiTwotoneMail />
@@ -19,7 +19,7 @@ export const ContactSection = () => {
             text="drop me a message"
             bgColor="bg-slate-50"
             textColor="text-dark-slate"
-            extraClass="font-semibold my-0"
+            extraClass="font-semibold"
           />
         </div>
         <div className="flex flex-row items-center py-1">
@@ -31,7 +31,7 @@ export const ContactSection = () => {
             connect with me
           </a>
         </div>
-        <div className="flex flex-row items-center py-1">
+        <div className="flex flex-row items-center my-2 py-1">
           <Icon>
             <SiGithub />
           </Icon>
@@ -40,7 +40,7 @@ export const ContactSection = () => {
             connect with me
           </a>
         </div>
-        <div className="flex flex-row items-center py-1">
+        <div className="flex flex-row items-center my-2 py-1">
           <Icon>
             <SiTwitter />
           </Icon>

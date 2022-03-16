@@ -13,11 +13,9 @@ export const Header = () => {
       if (window.scrollY > lastScrollY) {
         // if scroll down hide the navbar
         setShow(false);
-        console.log("scrolling down");
       } else {
         // if scroll up show the navbar
         setShow(true);
-        console.log("scrolling up");
       }
       // remember current page location to use in the next move
       setLastScrollY(window.scrollY);
