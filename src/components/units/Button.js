@@ -4,9 +4,13 @@ export const Button = ({
   bgColor = "bg-dark-slate",
   textColor = "text-slate-50",
   fontSize = "text-lg",
+  extraClass = "",
 }) => {
   return (
-    <button onClick={onClick} className={`rounded-md my-2 mx-1 px-2 py-1 ${fontSize} ${bgColor} ${textColor}`}>
+    <button
+      onClick={onClick}
+      className={`rounded-md my-2 mx-1 px-2 py-1 ${fontSize} ${bgColor} ${textColor} ${extraClass}`}
+    >
       {text}
     </button>
   );

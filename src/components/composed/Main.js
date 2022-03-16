@@ -6,6 +6,7 @@ import { SkillsSection } from "./SkillsSection";
 import { Modal } from "./Modal";
 import { about } from "../../copy_draft";
 import { ProjectsSection } from "./ProjectsSection";
+import { ContactSection } from "./ContactsSection";
 
 export const Main = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,6 +33,7 @@ export const Main = () => {
         </button>
       </TextSection>
       <ProjectsSection />
+      <ContactSection />
     </main>
   );
 };
