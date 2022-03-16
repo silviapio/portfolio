@@ -2,8 +2,8 @@ import { SectionTitle } from "../units/SectionTitle";
 
 export const LastTextSection = () => {
   return (
-    <div className="mb-4">
-      <SectionTitle titleText="...about" />
+    <section className="my-8 sm:mx-12">
+      <SectionTitle titleText="...dulcis in fundo" />
       <p className="px-2 sm:text-lg">
         The beauty of web development and programming in general, is that no matter how deep your understanding is or
         what beautiful things you can build, there is always something left to learn. Some topics I'm focusing on at the
@@ -20,6 +20,6 @@ export const LastTextSection = () => {
         I was a swimmer when teenager and I worked as a swimming trainer while studying Economics 🏊🏽
       </p>
       <p className="px-2 sm:text-lg">I'm Italian, and my favorite dish is indeed pizza! 🍕</p>
-    </div>
+    </section>
   );
 };

@@ -42,9 +42,9 @@ export const Header = () => {
   const getVisibilityClass = () => (show ? "" : "invisible");
 
   return (
-    <header className={`${getVisibilityClass()} flex justify-between px-4 font-bold sticky top-0 z-20 bg-slate-50/75`}>
-      <p className="font-inconsolata text-4xl text-bright-red my-4">{"{silvia}"}</p>
-      {isTabletOrLarger ? <Navbar /> : <BurgerMenu />}
+    <header className={`${getVisibilityClass()} w-full flex justify-between px-4 fixed top-0 z-20 bg-slate-50/75`}>
+      <p className="font-inconsolata text-4xl text-bright-red font-bold tracking-widest my-4">{"{silvia}"}</p>
+      {isTabletOrLarger && <Navbar />}
     </header>
   );
 };

@@ -6,7 +6,7 @@ import { SiLinkedin, SiTwitter, SiGithub } from "react-icons/si";
 
 export const ContactSection = () => {
   return (
-    <div className="w-full flex flex-col items-start">
+    <section className="w-full flex flex-col items-start p-2 mt-8 sm:mx-12">
       <SectionTitle titleText="...contacts" />
       <div>
         <p className="text-lg mb-2">Which type are you?</p>
@@ -37,7 +37,7 @@ export const ContactSection = () => {
           </Icon>
           <p className="ml-2 text-lg">GitHub:</p>
           <a href="#linkedin" className="ml-2 text-lg text-dark-slate font-semibold">
-            connect with me
+            visit my profile
           </a>
         </div>
         <div className="flex flex-row items-center my-2 py-1">
@@ -50,6 +50,6 @@ export const ContactSection = () => {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

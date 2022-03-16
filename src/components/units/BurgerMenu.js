@@ -7,6 +7,9 @@ var styles = {
     height: "30px",
     right: "1rem",
     top: "1.25rem",
+    backgroundColor: "var(--light-slate)",
+    borderColor: "var(--light-slate)",
+    borderWeight: "4px",
   },
   bmBurgerBars: {
     background: "var(--dark-slate)",
@@ -30,8 +33,9 @@ var styles = {
   },
   bmMenu: {
     background: "var(--dark-slate)",
-    padding: "2.5em 1.5em 0",
-    fontSize: "1.15em",
+    padding: "1.5em 0.5em 0",
+    fontSize: "1.35em",
+    letterSpacing: ".2rem",
   },
   bmItemList: {
     display: "flex",
@@ -44,6 +48,10 @@ var styles = {
     display: "block",
     marginTop: "1rem",
   },
+  bmOverlay: {
+    background: "rgba(0, 0, 0, 0.3)",
+    marginLeft: "-1rem",
+  },
 };
 
 export const BurgerMenu = () => {
@@ -53,7 +61,7 @@ export const BurgerMenu = () => {
   };
 
   return (
-    <Menu onStateChange={toggleMenuAria} right styles={styles}>
+    <Menu customCrossIcon={false} onStateChange={toggleMenuAria} right styles={styles}>
       <a className="menu-item" href="#skills">
         skills
       </a>

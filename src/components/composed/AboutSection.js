@@ -3,7 +3,7 @@ import { Button } from "../units/Button";
 
 export const AboutSection = ({ openDialogFunction }) => {
   return (
-    <div className="mb-4">
+    <section className="mt-10 mb-4 sm:mx-12">
       <SectionTitle titleText="...about" />
       <p className="px-2 sm:text-lg">Economist by university, Front End Developer by passion.</p>
       <p className="px-2 sm:text-lg">
@@ -23,10 +23,11 @@ export const AboutSection = ({ openDialogFunction }) => {
         text="Why should you want a Junior in your team?"
         textColor="text-bright-red-text"
         bgColor="bg-slate-50"
-        extraClass="px-2 font-semibold"
+        extraClass="font-semibold"
+        padding="p-1"
         onClick={openDialogFunction}
       />
-    </div>
+    </section>
   );
 };
 

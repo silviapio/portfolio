@@ -1,4 +1,5 @@
 import { Skill } from "../units/Skill";
+import { SectionTitle } from "../units/SectionTitle";
 
 import {
   SiJavascript,
@@ -129,9 +130,18 @@ export const SkillsSection = () => {
   ));
 
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-wrap">{skills}</div>
-      <p className="text-sm px-2 mt-2">Missing anything? Please reach out and let me know, I'll give it a try!</p>
-    </div>
+    <section className="mt-8 sm:mx-12 self-center">
+      <SectionTitle titleText="...skills" />
+      <div className="flex flex-col">
+        <p className="px-2">Here's what I've used so far:</p>
+        <div className="flex flex-wrap">{skills}</div>
+        <p className="text-sm px-2 mt-2">Missing anything? Please reach out and let me know, I'll give it a try!</p>
+      </div>
+    </section>
   );
 };
+
+/*<section className="my-8 self-center">
+        <SectionTitle titleText="...skills" />
+        <SkillsSection />
+      </section>*/
