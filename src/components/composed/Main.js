@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Hero } from "./Hero";
-import { SectionTitle } from "../units/SectionTitle";
 import { AboutSection } from "./AboutSection";
 import { SkillsSection } from "./SkillsSection";
 import { Modal } from "./Modal";
@@ -9,6 +8,7 @@ import { ProjectsSection } from "./ProjectsSection";
 import { ContactSection } from "./ContactsSection";
 import { LastTextSection } from "./LastTextSection";
 import { BurgerMenu } from "../units/BurgerMenu";
+import { ContactForm } from "./ContactForm";
 
 export const Main = () => {
   const [isJuniorDevModalOpen, setIsJuniorDevModalOpen] = useState(false);
@@ -66,6 +66,7 @@ export const Main = () => {
         </div>
       )}
       {isJuniorDevModalOpen && <Modal handleClose={handleJuniorDevClose} />}
+      <ContactForm />
       <Hero />
       <SkillsSection />
       <AboutSection openDialogFunction={openJuniorDevModal} />
