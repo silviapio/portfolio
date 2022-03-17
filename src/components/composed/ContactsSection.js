@@ -9,7 +9,7 @@ export const ContactSection = ({ openDialogFunction }) => {
     <section id="contactsSection" className="w-full flex flex-col items-start p-2 mt-8 sm:mx-12">
       <SectionTitle titleText="...contacts" />
       <div>
-        <p className="text-lg mb-2">Which type are you?</p>
+        <p className="text-lg mb-1">Let's connect! How, it's totally up to you:</p>
         <div className="flex flex-row items-center">
           <Icon className="mt-[1px] w-[18px] h-[18px]">
             <AiTwotoneMail />
@@ -28,7 +28,12 @@ export const ContactSection = ({ openDialogFunction }) => {
             <SiLinkedin />
           </Icon>
           <p className="ml-2 text-lg">LinkedIn:</p>
-          <a href="#linkedin" className="ml-2 text-lg text-dark-slate font-semibold">
+          <a
+            href="https://www.linkedin.com/in/silvia-piovesan/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-2 text-lg text-dark-slate font-semibold"
+          >
             connect with me
           </a>
         </div>
@@ -37,7 +42,12 @@ export const ContactSection = ({ openDialogFunction }) => {
             <SiGithub />
           </Icon>
           <p className="ml-2 text-lg">GitHub:</p>
-          <a href="#linkedin" className="ml-2 text-lg text-dark-slate font-semibold">
+          <a
+            href="https://github.com/silviapio"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-2 text-lg text-dark-slate font-semibold"
+          >
             visit my profile
           </a>
         </div>
@@ -46,7 +56,12 @@ export const ContactSection = ({ openDialogFunction }) => {
             <SiTwitter />
           </Icon>
           <p className="ml-2 text-lg">Tech Twitter:</p>
-          <a href="#twitter" className="ml-2 text-lg text-dark-slate font-semibold">
+          <a
+            href="https://twitter.com/silvia_piov"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-2 text-lg text-dark-slate font-semibold"
+          >
             follow me
           </a>
         </div>
