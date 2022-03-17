@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { InputText } from "../units/InputText";
 import { Button } from "../units/Button";
-//import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 
-export const ContactForm = () => {
+export const ContactForm = ({ closeFunction }) => {
   const [formData, setFormData] = useState({
     user_name: "",
     user_email: "",
     message: "",
+    "g-recaptcha-response": "",
   });
 
   const [inputErrors, setInputErrors] = useState(
@@ -17,6 +19,10 @@ export const ContactForm = () => {
       ["message", { error: true, visible: false }],
     ])
   );
+
+  const [recaptchaOK, setRecaptchaOK] = useState(false);
+  const [showLoader, setShowLoader] = useState(false);
+  const [responseReceived, setResponseReceived] = useState("");
 
   const handleInputChange = e => {
     setFormData(prevData => ({
@@ -79,53 +85,142 @@ export const ContactForm = () => {
       return;
     } else {
       console.log(formData);
+      setShowLoader(true);
+      setTimeout(() => {
+        setResponseReceived("ERROR");
+        setShowLoader(false);
+      }, 2000);
+
+      /* emailjs
+        .send(
+          "default_service",
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+          formData,
+          process.env.REACT_APP_EMAILJS_USER_ID
+        )
+        .then(
+          result => {
+            setShowLoader(false);
+            setResponseReceived("OK");
+            console.log(result.text);
+          },
+          error => {
+            setShowLoader(false);
+            setResponseReceived("ERROR");
+            console.log(error.text);
+          }
+        ); */
     }
   };
 
-  return (
-    <>
-      <form onSubmit={handleSubmit} autoComplete="off">
-        <div>
-          <InputText
-            type="text"
-            id="user_name"
-            value={formData.user_name}
-            labelText="*Your name:"
-            placeholderText="Jane Doe"
-            messageText="error: name is required"
-            hasError={hasError("user_name")}
-            onBlur={checkOnBlur}
-            onChange={handleInputChange}
-          />
-          <InputText
-            type="text"
-            id="user_email"
-            value={formData.user_email}
-            labelText="*Your email:"
-            placeholderText="janedoe@email.com"
-            messageText="error: please enter a valid email"
-            hasError={hasError("user_email")}
-            onBlur={checkOnBlur}
-            onChange={handleInputChange}
-          />
-          <InputText
-            type="textarea"
-            id="message"
-            value={formData.message}
-            labelText="*Your message:"
-            placeholderText="Tell me why you want to get in touch!"
-            messageText="error: message is required"
-            hasError={hasError("message")}
-            onBlur={checkOnBlur}
-            onChange={handleInputChange}
-          />
-        </div>
+  const onReCAPTCHAChange = value => {
+    if (!value) {
+      setRecaptchaOK(false);
+    } else {
+      setRecaptchaOK(true);
+      setFormData(prevData => ({
+        ...prevData,
+        "g-recaptcha-response": value,
+      }));
+    }
+  };
 
-        <div>
-          <Button text="Reset Form" onClick={() => console.log("cancel")} />
-          <Button text="Save Data" onClick={handleSubmit} />
+  const renderUI = () => {
+    if (showLoader) {
+      return (
+        <div className="animate-pulse">
+          <p className="text-dark-slate font-semibold tracking-wider">...sending email...</p>
         </div>
-      </form>
-    </>
-  );
+      );
+    } else if (responseReceived) {
+      const messageText =
+        responseReceived === "OK"
+          ? `(｡◕‿◕｡)
+          Congratulations! Your email was sent. 
+          You'll hear from me soon.`
+          : `
+          ¯\\_(ツ)_/¯
+          Ooops, there was an error in your request. 
+          Please try again or connect on LinkedIn/Twitter!
+          `;
+      return (
+        <div className="flex flex-col justify-center">
+          <p className="text-slate tracking-wide whitespace-pre-line text-center">{messageText}</p>
+          <div className="flex justify-center mt-4">
+            <Button
+              text="close"
+              onClick={closeFunction}
+              bgColor="bg-slate-200"
+              textColor="text-bright-red-text"
+              extraClass="font-semibold border-2 border-bright-red-text focus:bg-white"
+            />
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div className="flex flex-col justify-center">
+          <form onSubmit={handleSubmit}>
+            <div>
+              <InputText
+                type="text"
+                id="user_name"
+                value={formData.user_name}
+                labelText="Your name*"
+                placeholderText="Jane Doe"
+                messageText="name is required"
+                hasError={hasError("user_name")}
+                onBlur={checkOnBlur}
+                onChange={handleInputChange}
+              />
+              <InputText
+                type="text"
+                id="user_email"
+                value={formData.user_email}
+                labelText="Your email*"
+                placeholderText="janedoe@email.com"
+                messageText="please enter a valid email"
+                hasError={hasError("user_email")}
+                onBlur={checkOnBlur}
+                onChange={handleInputChange}
+              />
+              <InputText
+                type="textarea"
+                id="message"
+                value={formData.message}
+                labelText="Your message*"
+                placeholderText="Tell me something about you :)"
+                messageText="message is required"
+                hasError={hasError("message")}
+                onBlur={checkOnBlur}
+                onChange={handleInputChange}
+              />
+            </div>
+          </form>
+          <p className="mt-2 font-semibold">Your human being condition*</p>
+          <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA} onChange={onReCAPTCHAChange} size="normal" />
+          <div className="self-end mt-2">
+            <Button
+              text="cancel"
+              onClick={closeFunction}
+              onMouseDown={e => e.preventDefault()} // prevents onBlur check to fire when canceling
+              bgColor="bg-slate-200"
+              textColor="text-bright-red-text"
+              extraClass="font-semibold border-2 border-bright-red-text focus:bg-white"
+            />
+            <Button
+              disabled={!recaptchaOK}
+              text="send message"
+              onClick={handleSubmit}
+              bgColor="bg-bright-red-bg"
+              textColor="text-white"
+              extraClass="font-semibold border-2 border-bright-red-bg focus:bg-bright-red"
+            />
+          </div>
+        </div>
+      );
+    }
+  };
+
+  return renderUI();
 };

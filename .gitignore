@@ -26,3 +26,6 @@ yarn-error.log*
 # my misc files
 toDo.md
 copy_draft.js
+
+# private
+.env

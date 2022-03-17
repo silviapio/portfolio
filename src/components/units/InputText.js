@@ -1,3 +1,6 @@
+import { Icon } from "./Icon";
+import { BiError } from "react-icons/bi";
+
 export const InputText = ({
   id,
   value,
@@ -21,6 +24,7 @@ export const InputText = ({
           placeholder={placeholderText}
           onBlur={onBlur}
           onChange={onChange}
+          className={`rounded px-2 py-1 focus:outline-dark-slate ${hasError && "focus:outline-bright-red-text"}`}
         />
       );
     } else if (type === "textarea") {
@@ -33,18 +37,26 @@ export const InputText = ({
           placeholder={placeholderText}
           onBlur={onBlur}
           onChange={onChange}
+          className={`rounded min-h-[120px] px-2 py-1 focus:outline-dark-slate ${
+            hasError && "focus:outline-bright-red-text"
+          }`}
         />
       );
     }
   };
 
-  const displayError = hasError ? "" : "hidden";
-
   return (
-    <div>
-      <label htmlFor={id}>{labelText}</label>
+    <div className="flex flex-col my-2 text-dark-slate">
+      <label className="font-semibold" htmlFor={id}>
+        {labelText}
+      </label>
       {inputField(type)}
-      <small className={`${displayError}`}>{messageText}</small>
+      <div className={`${hasError ? "" : "hidden"} flex items-center text-bright-red-text`}>
+        <Icon title="error">
+          <BiError />
+        </Icon>
+        <small className={`ml-1 text-base`}>{messageText}</small>
+      </div>
     </div>
   );
 };

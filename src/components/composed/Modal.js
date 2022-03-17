@@ -21,7 +21,7 @@ export const Modal = ({ handleClose }) => {
 
   const listItems = bulletPoints.map((item, index) => (
     <li key={index} className="flex flex-row items-start">
-      <Icon className="mt-1 mr-2" color="var(--bright-red)" altText="light-bulb">
+      <Icon className="mt-1 mr-2" color="var(--bright-red)" title="light-bulb">
         <HiOutlineLightBulb />
       </Icon>
       <p>{item}</p>
@@ -30,7 +30,7 @@ export const Modal = ({ handleClose }) => {
 
   return (
     /* Use `initialFocus` to force initial focus to a specific ref. */
-    <Dialog initialFocus={closeButtonRef} open={isOpen} onClose={close} className="fixed z-10 inset-0 overflow-y-auto">
+    <Dialog initialFocus={closeButtonRef} open={isOpen} onClose={close} className="fixed z-30 inset-0 overflow-y-auto">
       <Dialog.Overlay className="fixed inset-0 bg-slate-800 opacity-90" />
       <div className="flex items-center justify-center min-h-screen">
         <div className="flex flex-col bg-slate-200 z-20 p-6 rounded-lg shadow-inner">
