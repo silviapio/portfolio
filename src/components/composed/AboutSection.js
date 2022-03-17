@@ -9,7 +9,7 @@ export const AboutSection = ({ openDialogFunction }) => {
       <p className="px-2 sm:text-lg">
         I recently graduated from a bootcamp, where I discovered the beauty of coding and programming, diving deep into
         JavaScript and React.js. I must say, the journey has been lovely so far, and I'm absolutely motivated to keep
-        learning and building amazing things! -Check my projects-
+        learning and building amazing things! Check my projects
       </p>
       <p className="px-2 whitespace-pre-line sm:text-lg">
         Before this, I've worked for several years in international teams and projects in the pharmaceutical industry. I

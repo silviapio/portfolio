@@ -31,7 +31,7 @@ export const SkillsSection = () => {
       skillText: "Git",
       altText: "Git",
       color: "git-red",
-      textColor: "text-git-red",
+      textColor: "text-dark-slate",
       className: "bg-slate-300 font-semibold",
     },
     {
@@ -46,9 +46,9 @@ export const SkillsSection = () => {
       icon: SiReactrouter,
       skillText: "React Router",
       altText: "React Router",
-      color: "reactrouter-red",
-      textColor: "text-reactrouter-red",
-      className: "bg-slate-300 font-semibold",
+      color: "light-slate",
+      textColor: "text-slate-50",
+      className: "bg-reactrouter-red font-medium",
     },
     {
       icon: SiRedux,
@@ -63,7 +63,7 @@ export const SkillsSection = () => {
       skillText: "HTML 5",
       altText: "HTML 5",
       color: "html-red",
-      textColor: "text-html-red",
+      textColor: "text-dark-slate",
       className: "bg-slate-300 font-semibold",
     },
     {
@@ -78,33 +78,33 @@ export const SkillsSection = () => {
       icon: SiStyledcomponents,
       skillText: "styled-components",
       altText: "styled-components",
-      color: "light-slate",
-      textColor: "text-slate-50",
-      className: "bg-styledcomp-pink font-medium",
+      color: "dark-slate",
+      textColor: "text-[#000000]",
+      className: "bg-styledcomp-pink font-semibold",
     },
     {
       icon: SiTailwindcss,
       skillText: "Tailwind CSS",
       altText: "Tailwind CSS",
       color: "dark-slate",
-      textColor: "text-dark-slate",
+      textColor: "text-[#000000]",
       className: "bg-tailwind-blue font-semibold",
     },
     {
       icon: SiC,
       skillText: "C",
       altText: "C",
-      color: "light-slate",
+      color: "c-gray",
       textColor: "text-slate-50",
-      className: "bg-c-gray font-medium",
+      className: "bg-dark-slate font-medium",
     },
     {
       icon: SiMysql,
       skillText: "MySQL",
       altText: "MySQL",
-      color: "light-slate",
-      textColor: "text-slate-50",
-      className: "bg-mysql-blue font-medium",
+      color: "mysql-blue",
+      textColor: "text-dark-slate",
+      className: "bg-slate-300 font-semibold",
     },
     {
       icon: SiFigma,
@@ -140,8 +140,3 @@ export const SkillsSection = () => {
     </section>
   );
 };
-
-/*<section className="my-8 self-center">
-        <SectionTitle titleText="...skills" />
-        <SkillsSection />
-      </section>*/

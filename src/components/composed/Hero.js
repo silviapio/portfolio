@@ -10,11 +10,11 @@ export const Hero = () => {
         <h1 className="text-4xl text-dark-slate font-inconsolata font-semibold">
           I'm Silvia, <span className="text-bright-red">Front End Developer</span>.
         </h1>
-        <h4 className="text-2xl">
+        <h2 className="text-2xl">
           I love building beautiful and accessible websites.
           <br />
           I'm based in Barcelona, Spain.
-        </h4>
+        </h2>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { SectionTitle } from "../units/SectionTitle";
 import mwc22 from "../../assets/mwc22.png";
 import reactube from "../../assets/reactube.png";
 import speedtyping from "../../assets/speedtyping.png";
-import image from "../../assets/placeholder.png";
+import portfolio from "../../assets/portfolio.png";
 
 const projectsData = [
   {
@@ -48,7 +48,7 @@ const projectsData = [
     title: "Portfolio",
     body: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, aliquid placeat? Beatae nam porro dolore. Deleniti magnam ad quae nesciunt.",
     skills: "JavaScript, HTML, CSS, React.js",
-    imgSrc: image,
+    imgSrc: portfolio,
     altText: "snippets of website in different devices",
   },
 ];
