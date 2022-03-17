@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import { InputText } from "../units/InputText";
 import { Button } from "../units/Button";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 
 export const ContactForm = ({ closeFunction }) => {
+  const isTabletOrLarger = useMediaQuery({ query: "(min-width: 640px)" });
+
   const [formData, setFormData] = useState({
     user_name: "",
     user_email: "",
@@ -198,7 +201,11 @@ export const ContactForm = ({ closeFunction }) => {
             </div>
           </form>
           <p className="mt-2 font-semibold">Your human being condition*</p>
-          <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA} onChange={onReCAPTCHAChange} size="normal" />
+          <ReCAPTCHA
+            sitekey={process.env.REACT_APP_RECAPTCHA}
+            onChange={onReCAPTCHAChange}
+            size={isTabletOrLarger ? "normal" : "compact"}
+          />
           <div className="self-end mt-2">
             <Button
               text="cancel"

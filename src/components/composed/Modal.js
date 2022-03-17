@@ -31,7 +31,7 @@ export const Modal = ({ handleClose }) => {
   return (
     /* Use `initialFocus` to force initial focus to a specific ref. */
     <Dialog initialFocus={closeButtonRef} open={isOpen} onClose={close} className="fixed z-30 inset-0 overflow-y-auto">
-      <Dialog.Overlay className="fixed inset-0 bg-slate-800 opacity-90" />
+      <Dialog.Overlay className="fixed h-[120%] inset-0 bg-slate-800 opacity-90" />
       <div className="flex items-center justify-center min-h-screen">
         <div className="flex flex-col bg-slate-200 z-20 p-6 rounded-lg shadow-inner">
           <Dialog.Title className="font-inconsolata text-xl text-bright-red font-semibold">

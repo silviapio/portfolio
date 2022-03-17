@@ -7,7 +7,7 @@ export const App = () => {
   consoleSurprise();
 
   return (
-    <div className="flex flex-col h-full">
+    <div id="pageTop" className="flex flex-col h-full">
       <Header />
       <Main />
       <Footer />

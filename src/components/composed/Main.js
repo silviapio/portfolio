@@ -69,7 +69,7 @@ export const Main = () => {
 
   return (
     <main className="flex flex-col mt-14 p-4 items-start">
-      {isTabletOrLarger ? null : (
+      {isTabletOrLarger ? null : isContactDialogOpen || isJuniorDevModalOpen ? null : (
         <div className={getVisibilityClass()}>
           <BurgerMenu />
         </div>

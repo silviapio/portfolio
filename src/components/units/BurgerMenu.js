@@ -62,17 +62,17 @@ export const BurgerMenu = () => {
 
   return (
     <Menu customCrossIcon={false} onStateChange={toggleMenuAria} right styles={styles}>
-      <a className="menu-item" href="#skills">
+      <a className="menu-item" href="#skillsSection">
         skills
       </a>
-      <a className="menu-item" href="#about">
+      <a className="menu-item" href="#aboutSection">
         about
       </a>
-      <a className="menu-item" href="#projects">
+      <a className="menu-item" href="#projectsSection">
         projects
       </a>
-      <a className="menu-item bg-bright-red px-2 py-1 rounded" href="#contact">
-        contact
+      <a className="menu-item bg-bright-red px-2 py-1 rounded" href="#contactsSection">
+        contacts
       </a>
     </Menu>
   );

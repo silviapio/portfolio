@@ -6,7 +6,7 @@ import { SiLinkedin, SiTwitter, SiGithub } from "react-icons/si";
 
 export const ContactSection = ({ openDialogFunction }) => {
   return (
-    <section className="w-full flex flex-col items-start p-2 mt-8 sm:mx-12">
+    <section id="contactsSection" className="w-full flex flex-col items-start p-2 mt-8 sm:mx-12">
       <SectionTitle titleText="...contacts" />
       <div>
         <p className="text-lg mb-2">Which type are you?</p>
