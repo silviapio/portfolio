@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Hero } from "./Hero";
-import { SectionTitle } from "../units/SectionTitle";
 import { AboutSection } from "./AboutSection";
 import { SkillsSection } from "./SkillsSection";
 import { Modal } from "./Modal";
@@ -9,9 +8,11 @@ import { ProjectsSection } from "./ProjectsSection";
 import { ContactSection } from "./ContactsSection";
 import { LastTextSection } from "./LastTextSection";
 import { BurgerMenu } from "../units/BurgerMenu";
+import { ContactDialog } from "./ContactDialog";
 
 export const Main = () => {
   const [isJuniorDevModalOpen, setIsJuniorDevModalOpen] = useState(false);
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
 
   const isTabletOrLarger = useMediaQuery({ query: "(min-width: 640px)" });
   const [showBurger, setShowBurger] = useState(true);
@@ -54,8 +55,16 @@ export const Main = () => {
     setIsJuniorDevModalOpen(true);
   };
 
+  const openContactDialog = () => {
+    setIsContactDialogOpen(true);
+  };
+
   const handleJuniorDevClose = () => {
     setIsJuniorDevModalOpen(false);
+  };
+
+  const handleContactDialogClose = () => {
+    setIsContactDialogOpen(false);
   };
 
   return (
@@ -66,11 +75,12 @@ export const Main = () => {
         </div>
       )}
       {isJuniorDevModalOpen && <Modal handleClose={handleJuniorDevClose} />}
+      {isContactDialogOpen && <ContactDialog handleClose={handleContactDialogClose} />}
       <Hero />
       <SkillsSection />
       <AboutSection openDialogFunction={openJuniorDevModal} />
       <ProjectsSection />
-      <ContactSection />
+      <ContactSection openDialogFunction={openContactDialog} />
       <LastTextSection />
     </main>
   );

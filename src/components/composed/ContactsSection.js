@@ -4,7 +4,7 @@ import { Button } from "../units/Button";
 import { AiTwotoneMail } from "react-icons/ai";
 import { SiLinkedin, SiTwitter, SiGithub } from "react-icons/si";
 
-export const ContactSection = () => {
+export const ContactSection = ({ openDialogFunction }) => {
   return (
     <section className="w-full flex flex-col items-start p-2 mt-8 sm:mx-12">
       <SectionTitle titleText="...contacts" />
@@ -20,6 +20,7 @@ export const ContactSection = () => {
             bgColor="bg-slate-50"
             textColor="text-dark-slate"
             extraClass="font-semibold"
+            onClick={openDialogFunction}
           />
         </div>
         <div className="flex flex-row items-center py-1">
