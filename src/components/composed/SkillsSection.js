@@ -130,7 +130,7 @@ export const SkillsSection = () => {
   ));
 
   return (
-    <section id="skillsSection" className="mt-8 px-4 sm:mx-12 self-center">
+    <section id="skillsSection" className="mt-8 px-4 sm:mx-12 2xl:mx-24">
       <SectionTitle titleText="...skills" />
       <div className="flex flex-col">
         <p className="px-2">Here's what I've used so far:</p>

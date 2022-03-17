@@ -6,12 +6,12 @@ import { SiLinkedin, SiTwitter, SiGithub } from "react-icons/si";
 
 export const ContactSection = ({ openDialogFunction }) => {
   return (
-    <section id="contactsSection" className="w-full flex flex-col items-start px-6 py-2 mt-8 sm:px-14">
+    <section id="contactsSection" className="flex flex-col items-start py-2 mt-8 px-4 sm:mx-12 2xl:mx-24">
       <SectionTitle titleText="...contacts" />
-      <div>
+      <div className="px-2">
         <p className="text-lg mb-1">Let's connect! How, it's totally up to you:</p>
         <div className="flex flex-row items-center">
-          <Icon className="mt-[1px] w-[18px] h-[18px]">
+          <Icon className="mt-[1px] w-[18px] h-[18px]" color="var(--bright-red-text)">
             <AiTwotoneMail />
           </Icon>
           <p className="ml-2 text-lg">Email:</p>
@@ -24,7 +24,7 @@ export const ContactSection = ({ openDialogFunction }) => {
           />
         </div>
         <div className="flex flex-row items-center py-1">
-          <Icon>
+          <Icon color="var(--bright-red-text)">
             <SiLinkedin />
           </Icon>
           <p className="ml-2 text-lg">LinkedIn:</p>
@@ -38,7 +38,7 @@ export const ContactSection = ({ openDialogFunction }) => {
           </a>
         </div>
         <div className="flex flex-row items-center my-2 py-1">
-          <Icon>
+          <Icon color="var(--bright-red-text)">
             <SiGithub />
           </Icon>
           <p className="ml-2 text-lg">GitHub:</p>
@@ -52,7 +52,7 @@ export const ContactSection = ({ openDialogFunction }) => {
           </a>
         </div>
         <div className="flex flex-row items-center my-2 py-1">
-          <Icon>
+          <Icon color="var(--bright-red-text)">
             <SiTwitter />
           </Icon>
           <p className="ml-2 text-lg">Tech Twitter:</p>

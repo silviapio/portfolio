@@ -2,7 +2,7 @@ import { Button } from "../units/Button";
 
 export const ProjectCard = ({ imgSrc, altText, title, body, skills, learningsText }) => {
   return (
-    <div className="flex flex-col bg-slate-50 rounded-md m-4 py-2 px-3 max-w-lg md:w-1/2">
+    <div className="flex flex-col bg-slate-50 rounded-md m-4 py-2 px-3 max-w-md xl:max-w-xl 2xl:max-w-2xl">
       <img src={imgSrc} alt={altText} />
       <h3 className="mt-2 text-2xl text-bright-red-text font-semibold font-inconsolata">{title}</h3>
       <p className="font-medium whitespace-pre-line">{body}</p>
