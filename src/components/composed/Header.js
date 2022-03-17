@@ -49,7 +49,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`${getVisibilityClass()} w-full flex justify-between px-4 fixed top-0 z-20 ${
+      className={`${getVisibilityClass()} w-full flex justify-between px-6 fixed top-0 z-20 ${
         isOpaque ? "bg-slate-50/75" : "bg-slate-50"
       }`}
     >

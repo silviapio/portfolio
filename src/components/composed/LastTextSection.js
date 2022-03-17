@@ -2,7 +2,7 @@ import { SectionTitle } from "../units/SectionTitle";
 
 export const LastTextSection = () => {
   return (
-    <section className="my-8 sm:mx-12">
+    <section className="my-8 px-4 sm:mx-12">
       <SectionTitle titleText="...dulcis in fundo" />
       <p className="px-2 sm:text-lg">
         The beauty of web development and programming in general, is that no matter how deep your understanding is or

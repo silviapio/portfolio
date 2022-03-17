@@ -5,11 +5,8 @@ var styles = {
     position: "fixed",
     width: "34px",
     height: "30px",
-    right: "1rem",
+    right: "1.5rem",
     top: "1.25rem",
-    backgroundColor: "var(--light-slate)",
-    borderColor: "var(--light-slate)",
-    borderWeight: "4px",
   },
   bmBurgerBars: {
     background: "var(--dark-slate)",
