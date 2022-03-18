@@ -11,7 +11,7 @@ export const consoleSurprise = () => {
 
 
         Not sure why?
-        Click on "Why should you want a Junior in your team",
-        in the {...about} section. And then, call me :)
+        Check why you need a Junior in your team at the
+        end of the about section. And then, call me :)
                    `);
 };
