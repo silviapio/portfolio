@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Navbar } from "../units/Navbar";
-import { BurgerMenu } from "../units/BurgerMenu";
 
 export const Header = () => {
   const isTabletOrLarger = useMediaQuery({ query: "(min-width: 640px)" });
@@ -36,24 +35,18 @@ export const Header = () => {
         window.removeEventListener("scroll", controlNavbar);
       };
     }
+    // eslint-disable-next-line
   }, [lastScrollY]);
-
-  useEffect(() => {
-    const menuWrap = document.querySelector(".bm-menu-wrap");
-    if (menuWrap) {
-      menuWrap.setAttribute("aria-hidden", true);
-    }
-  }, []);
 
   const getVisibilityClass = () => (show ? "" : "invisible");
 
   return (
     <header
-      className={`${getVisibilityClass()} w-full md:px-16 flex justify-between px-6 fixed top-0 z-20 ${
+      className={`${getVisibilityClass()} w-full md:px-16 flex justify-between items-center px-6 fixed top-0 z-20 ${
         isOpaque ? "bg-slate-50/75" : "bg-slate-50"
       }`}
     >
-      <a href="#pageTop" aria-describedby="scroll to top">
+      <a href="#pageTop" aria-describedby="scroll to top" tabIndex="0" className="outline-bright-red">
         <p className="font-inconsolata text-4xl text-bright-red font-bold tracking-widest my-4">{"{silvia}"}</p>
       </a>
       {isTabletOrLarger && <Navbar />}
