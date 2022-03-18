@@ -130,12 +130,12 @@ export const SkillsSection = () => {
   ));
 
   return (
-    <section id="skillsSection" className="mt-8 px-4 sm:mx-12 2xl:mx-24">
+    <section id="skillsSection" className="mt-8 px-4 md:mx-12 2xl:mx-28">
       <SectionTitle titleText="...skills" />
       <div className="flex flex-col">
         <p className="px-2">Here's what I've used so far:</p>
         <div className="flex flex-wrap">{skills}</div>
-        <p className="text-sm px-2 mt-2">Missing anything? Please reach out and let me know, I'll give it a try!</p>
+        <p className="px-2 mt-2">Missing anything? Please reach out and let me know, I'll give it a try!</p>
       </div>
     </section>
   );

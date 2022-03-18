@@ -21,10 +21,10 @@ export const Main = () => {
   const controlBurger = () => {
     if (typeof window !== "undefined") {
       if (window.scrollY > lastScrollY) {
-        // if scroll down hide the navbar
+        // if scroll down hide the burger
         setShowBurger(false);
       } else {
-        // if scroll up show the navbar
+        // if scroll up show the burger
         setShowBurger(true);
       }
       // remember current page location to use in the next move
@@ -40,9 +40,11 @@ export const Main = () => {
         window.removeEventListener("scroll", controlBurger);
       };
     }
+    // eslint-disable-next-line
   }, [lastScrollY]);
 
   useEffect(() => {
+    /* sets aria-hidden to hide burger menu content on loading */
     const menuWrap = document.querySelector(".bm-menu-wrap");
     if (menuWrap) {
       menuWrap.setAttribute("aria-hidden", true);
@@ -68,7 +70,7 @@ export const Main = () => {
   };
 
   return (
-    <main className="flex flex-col mt-14 py-4 items-start">
+    <main className="flex flex-col mt-16 py-4 items-start">
       {isTabletOrLarger ? null : isContactDialogOpen || isJuniorDevModalOpen ? null : (
         <div className={getVisibilityClass()}>
           <BurgerMenu />
