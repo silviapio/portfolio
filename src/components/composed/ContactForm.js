@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { InputText } from "../units/InputText";
 import { Button } from "../units/Button";
-import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 
 export const ContactForm = ({ closeFunction }) => {
@@ -87,32 +86,12 @@ export const ContactForm = ({ closeFunction }) => {
     if (errorFound) {
       return;
     } else {
-      console.log(formData);
+      console.log(formData.user_name, formData.user_email, formData.message);
       setShowLoader(true);
       setTimeout(() => {
         setResponseReceived("ERROR");
         setShowLoader(false);
       }, 2000);
-
-      /* emailjs
-        .send(
-          "default_service",
-          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-          formData,
-          process.env.REACT_APP_EMAILJS_USER_ID
-        )
-        .then(
-          result => {
-            setShowLoader(false);
-            setResponseReceived("OK");
-            console.log(result.text);
-          },
-          error => {
-            setShowLoader(false);
-            setResponseReceived("ERROR");
-            console.log(error.text);
-          }
-        ); */
     }
   };
 
