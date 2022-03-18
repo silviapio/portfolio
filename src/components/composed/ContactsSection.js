@@ -6,7 +6,7 @@ import { SiLinkedin, SiTwitter, SiGithub } from "react-icons/si";
 
 export const ContactSection = ({ openDialogFunction }) => {
   return (
-    <section id="contactsSection" className="flex flex-col items-start py-2 mt-8 px-4 sm:mx-12 2xl:mx-24">
+    <section id="contactsSection" className="flex flex-col items-start py-2 mt-8 px-4 md:mx-12 2xl:mx-28">
       <SectionTitle titleText="...contacts" />
       <div className="px-2">
         <p className="text-lg mb-1">Let's connect! How, it's totally up to you:</p>
@@ -17,8 +17,7 @@ export const ContactSection = ({ openDialogFunction }) => {
           <p className="ml-2 text-lg">Email:</p>
           <Button
             text="drop me a message"
-            bgColor="bg-slate-50"
-            textColor="text-dark-slate"
+            theme="linkAppearance"
             extraClass="font-semibold"
             onClick={openDialogFunction}
           />
@@ -32,7 +31,7 @@ export const ContactSection = ({ openDialogFunction }) => {
             href="https://www.linkedin.com/in/silvia-piovesan/"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-2 text-lg text-dark-slate font-semibold"
+            className="ml-2 text-lg text-bright-red-text font-semibold hover:underline hover:decoration-2 focus:outline-bright-red-text"
           >
             connect with me
           </a>
@@ -46,7 +45,7 @@ export const ContactSection = ({ openDialogFunction }) => {
             href="https://github.com/silviapio"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-2 text-lg text-dark-slate font-semibold"
+            className="ml-2 text-lg text-bright-red-text font-semibold hover:underline hover:decoration-2 focus:outline-bright-red-text"
           >
             visit my profile
           </a>
@@ -60,7 +59,7 @@ export const ContactSection = ({ openDialogFunction }) => {
             href="https://twitter.com/silvia_piov"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-2 text-lg text-dark-slate font-semibold"
+            className="ml-2 text-lg text-bright-red-text font-semibold hover:underline hover:decoration-2 focus:outline-bright-red-text"
           >
             follow me
           </a>

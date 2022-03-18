@@ -150,13 +150,7 @@ export const ContactForm = ({ closeFunction }) => {
         <div className="flex flex-col justify-center">
           <p className="text-slate tracking-wide whitespace-pre-line text-center">{messageText}</p>
           <div className="flex justify-center mt-4">
-            <Button
-              text="close"
-              onClick={closeFunction}
-              bgColor="bg-slate-200"
-              textColor="text-bright-red-text"
-              extraClass="font-semibold border-2 border-bright-red-text focus:bg-white"
-            />
+            <Button text="close" onClick={closeFunction} theme="redOutline" extraClass="font-semibold" />
           </div>
         </div>
       );
@@ -211,17 +205,15 @@ export const ContactForm = ({ closeFunction }) => {
               text="cancel"
               onClick={closeFunction}
               onMouseDown={e => e.preventDefault()} // prevents onBlur check to fire when canceling
-              bgColor="bg-slate-200"
-              textColor="text-bright-red-text"
-              extraClass="font-semibold border-2 border-bright-red-text focus:bg-white"
+              theme="dark"
+              extraClass="font-semibold"
             />
             <Button
               disabled={!recaptchaOK}
               text="send message"
               onClick={handleSubmit}
-              bgColor="bg-bright-red-bg"
-              textColor="text-white"
-              extraClass="font-semibold border-2 border-bright-red-bg focus:bg-bright-red"
+              theme="red"
+              extraClass="font-semibold"
             />
           </div>
         </div>
