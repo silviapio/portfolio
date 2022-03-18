@@ -1,11 +1,11 @@
 {
   "name": "silvia-portfolio",
-  "version": "1.0.0 beta",
+  "version": "1.1.0",
   "private": true,
   "description": "Silvia's portfolio",
   "author": "Silvia Piovesan",
   "license": "MIT",
-  "homepage": "https://silviapiovesan.herokuapp.com/",
+  "homepage": "",
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
     "@headlessui/react": "^1.5.0",
