@@ -6,10 +6,6 @@
   "author": "Silvia Piovesan",
   "license": "MIT",
   "homepage": "https://silviapiovesan.herokuapp.com/",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/silviapio/portfolio.git"
-  },
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
     "@headlessui/react": "^1.5.0",
