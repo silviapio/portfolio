@@ -7,7 +7,7 @@
 
 > Webpage designed and built from scratch, to showcase my projects as Web Developer
 
-### ✨ Deployed/demo version [https://portfolio-silvia.herokuapp.com/](https://portfolio-silvia.herokuapp.com/)
+### ✨ Deployed/demo version [https://silviapiovesan.herokuapp.com/](https://silviapiovesan.herokuapp.com/)
 
 ## Author
 
