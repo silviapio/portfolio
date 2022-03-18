@@ -1,8 +1,8 @@
 # Welcome to My Portfolio Page 👋
 
-![Version](https://img.shields.io/badge/version-1.0.0 beta-blue.svg?cacheSeconds=2592000)
+![Version](https://img.shields.io/badge/version-1.0.0beta-blue.svg?cacheSeconds=2592000)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/silviapio/portfolio/graphs/commit-activity)
-[![License: MIT](https://img.shields.io/github/license/silviapio/My Portfolio Page)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue)](#)
 [![Twitter: silvia_piov](https://img.shields.io/twitter/follow/silvia_piov.svg?style=social)](https://twitter.com/silvia_piov)
 
 > Webpage designed and built from scratch, to showcase my projects as Web Developer
