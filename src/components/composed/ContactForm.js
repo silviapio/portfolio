@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { InputText } from "../units/InputText";
 import { Button } from "../units/Button";
-import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 
 export const ContactForm = ({ closeFunction }) => {
@@ -93,26 +92,6 @@ export const ContactForm = ({ closeFunction }) => {
         setResponseReceived("ERROR");
         setShowLoader(false);
       }, 2000);
-
-      /* emailjs
-        .send(
-          "default_service",
-          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-          formData,
-          process.env.REACT_APP_EMAILJS_USER_ID
-        )
-        .then(
-          result => {
-            setShowLoader(false);
-            setResponseReceived("OK");
-            console.log(result.text);
-          },
-          error => {
-            setShowLoader(false);
-            setResponseReceived("ERROR");
-            console.log(error.text);
-          }
-        ); */
     }
   };
 
@@ -127,6 +106,8 @@ export const ContactForm = ({ closeFunction }) => {
       }));
     }
   };
+
+  const siteKeyRecaptcha = process.env.REACT_APP_RECAPTCHA;
 
   const renderUI = () => {
     if (showLoader) {
@@ -195,11 +176,17 @@ export const ContactForm = ({ closeFunction }) => {
             </div>
           </form>
           <p className="mt-2 font-semibold">Your human being condition*</p>
-          <ReCAPTCHA
-            sitekey={process.env.REACT_APP_RECAPTCHA}
-            onChange={onReCAPTCHAChange}
-            size={isTabletOrLarger ? "normal" : "compact"}
-          />
+          {siteKeyRecaptcha ? (
+            <ReCAPTCHA
+              sitekey={siteKeyRecaptcha}
+              onChange={onReCAPTCHAChange}
+              size={isTabletOrLarger ? "normal" : "compact"}
+            />
+          ) : (
+            <p className="w-2/3 text-slate tracking-wide whitespace-pre-line text-center">
+              ¯\\_(ツ)_/¯ Ooops, there was an error. Please try again or connect on LinkedIn/Twitter!
+            </p>
+          )}
           <div className="self-end mt-2">
             <Button
               text="cancel"
