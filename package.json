@@ -5,7 +5,7 @@
   "description": "Silvia's portfolio",
   "author": "Silvia Piovesan",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://silviapiovesan.herokuapp.com/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/silviapio/portfolio.git"
