@@ -25,7 +25,7 @@ var styles = {
   bmMenuWrap: {
     position: "fixed",
     height: "100%",
-    width: "200px",
+    width: "100%",
     opacity: "0.95",
   },
   bmMenu: {
@@ -51,26 +51,30 @@ var styles = {
   },
 };
 
-export const BurgerMenu = () => {
+export const BurgerMenu = ({ isVisible }) => {
   const toggleMenuAria = ({ isOpen }) => {
     const menuWrap = document.querySelector(".bm-menu-wrap");
     isOpen ? menuWrap.setAttribute("aria-hidden", false) : menuWrap.setAttribute("aria-hidden", true);
   };
 
   return (
-    <Menu customCrossIcon={false} onStateChange={toggleMenuAria} right styles={styles}>
-      <a className="menu-item" href="#skillsSection">
-        skills
-      </a>
-      <a className="menu-item" href="#aboutSection">
-        about
-      </a>
-      <a className="menu-item" href="#projectsSection">
-        projects
-      </a>
-      <a className="menu-item bg-bright-red px-2 py-1 rounded" href="#contactsSection">
-        contacts
-      </a>
-    </Menu>
+    <>
+      {isVisible && (
+        <Menu noOverlay customCrossIcon={false} onStateChange={toggleMenuAria} right styles={styles}>
+          <a className="menu-item" href="#skillsSection">
+            skills
+          </a>
+          <a className="menu-item" href="#aboutSection">
+            about
+          </a>
+          <a className="menu-item" href="#projectsSection">
+            projects
+          </a>
+          <a className="menu-item bg-bright-red-bg text-white px-2 py-1 rounded" href="#contactsSection">
+            contacts
+          </a>
+        </Menu>
+      )}
+    </>
   );
 };
