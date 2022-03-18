@@ -10,8 +10,7 @@ export const consoleSurprise = () => {
                    ====
 
 
-        Not sure why?
-        Check why you need a Junior in your team at the
-        end of the about section. And then, call me :)
+Open the dialog at the end of About section to see why you should. 
+And then, call me :)
                    `);
 };

@@ -19,16 +19,13 @@ export const AboutSection = ({ openDialogFunction }) => {
       <p className="px-2 whitespace-pre-line sm:text-lg">
         Suspendisse interdum consectetur libero id faucibus nisl. Vel eros donec ac odio tempor orci dapibus.
       </p>
-      <div className="px-2 flex items-center">
-        <p className="text-lg text-bright-red-text font-medium">You need a Junior in your team!</p>
-        <Button
-          text=">> click here to check why <<"
-          theme="linkAppearance"
-          extraClass="font-semibold"
-          padding="p-1"
-          onClick={openDialogFunction}
-        />
-      </div>
+      <Button
+        text="Click to discover why you should hire a Junior Dev"
+        theme="linkAppearance"
+        extraClass="font-semibold m-0"
+        padding="p-1"
+        onClick={openDialogFunction}
+      />
     </section>
   );
 };
