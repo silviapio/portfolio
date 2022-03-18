@@ -107,6 +107,8 @@ export const ContactForm = ({ closeFunction }) => {
     }
   };
 
+  const siteKeyRecaptcha = process.env.REACT_APP_RECAPTCHA;
+
   const renderUI = () => {
     if (showLoader) {
       return (
@@ -174,11 +176,17 @@ export const ContactForm = ({ closeFunction }) => {
             </div>
           </form>
           <p className="mt-2 font-semibold">Your human being condition*</p>
-          <ReCAPTCHA
-            sitekey={process.env.REACT_APP_RECAPTCHA}
-            onChange={onReCAPTCHAChange}
-            size={isTabletOrLarger ? "normal" : "compact"}
-          />
+          {siteKeyRecaptcha ? (
+            <ReCAPTCHA
+              sitekey={siteKeyRecaptcha}
+              onChange={onReCAPTCHAChange}
+              size={isTabletOrLarger ? "normal" : "compact"}
+            />
+          ) : (
+            <p className="w-2/3 text-slate tracking-wide whitespace-pre-line text-center">
+              ¯\\_(ツ)_/¯ Ooops, there was an error. Please try again or connect on LinkedIn/Twitter!
+            </p>
+          )}
           <div className="self-end mt-2">
             <Button
               text="cancel"
