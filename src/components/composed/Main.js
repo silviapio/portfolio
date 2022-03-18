@@ -70,10 +70,10 @@ export const Main = () => {
   };
 
   return (
-    <main className="flex flex-col mt-16 py-4 items-start">
+    <main className="flex flex-col mt-20 items-start">
       {isTabletOrLarger ? null : isContactDialogOpen || isJuniorDevModalOpen ? null : (
         <div className={getVisibilityClass()}>
-          <BurgerMenu />
+          <BurgerMenu isVisible={showBurger} />
         </div>
       )}
       {isJuniorDevModalOpen && <Modal handleClose={handleJuniorDevClose} />}
