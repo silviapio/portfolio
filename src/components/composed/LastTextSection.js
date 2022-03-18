@@ -2,22 +2,20 @@ import { SectionTitle } from "../units/SectionTitle";
 
 export const LastTextSection = () => {
   return (
-    <section className="my-8 px-4 sm:mx-12 2xl:mx-24">
+    <section className="my-8 px-4 md:mx-12 2xl:mx-28">
       <SectionTitle titleText="...dulcis in fundo" />
       <p className="px-2 sm:text-lg">
-        The beauty of web development and programming in general, is that no matter how deep your understanding is or
-        what beautiful things you can build, there is always something left to learn. Some topics I'm focusing on at the
-        moment: Web Accessibility: this is a very important area for me. There is so much power and information on the
-        Internet right now, we simply cannot forget to make everything we build, accessible for everyone. A great
-        resource for that is A11Y Project, specifically their accessibility checklist. If you are also interested in
-        this, please get in touch either via email or Twitter, and let's change the web together!
+        (placeholder text, copy is in progress!) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Nibh praesent tristique magna sit. Elit at imperdiet dui
+        accumsan sit. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin. Lacinia at quis risus sed
+        vulputate odio ut. Facilisi cras fermentum odio eu. Neque gravida in fermentum et sollicitudin ac orci phasellus
+        egestas. Bibendum est ultricies integer quis auctor elit sed. Viverra vitae congue eu consequat ac felis donec.
+        Eget nunc lobortis mattis aliquam.
       </p>
-      <p className="px-2 sm:text-lg">Some Fun facts about me:</p>
+      <p className="px-2 sm:text-lg">I won't let you leave without knowing some fun facts about me:</p>
+      <p className="px-2 sm:text-lg">I went hiking on the Camino de Santiago 4 times 🚶‍♀️ Totally recommended!</p>
       <p className="px-2 sm:text-lg">
-        I have done around 2,000 km hiking on the Camino de Santiago 🚶‍♀️ Totally recommended!
-      </p>
-      <p className="px-2 sm:text-lg">
-        I was a swimmer when teenager and I worked as a swimming trainer while studying Economics 🏊🏽
+        I was a swimmer when teenager and I worked as a swimming trainer while attending university 🏊🏽
       </p>
       <p className="px-2 sm:text-lg">I'm Italian, and my favorite dish is indeed pizza! 🍕</p>
     </section>

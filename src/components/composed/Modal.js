@@ -12,12 +12,7 @@ export const Modal = ({ handleClose }) => {
     handleClose();
   };
 
-  const bulletPoints = [
-    "you can teach them best practices",
-    "if they come from other industries, they already know how to work in teams and how a company functions",
-    "you can teach them best practices",
-    "if they come from other industries, they already know how to work in teams and how a company functions",
-  ];
+  const bulletPoints = ["point 1", "point 2", "point 3", "point 4"];
 
   const listItems = bulletPoints.map((item, index) => (
     <li key={index} className="flex flex-row items-start">
@@ -35,7 +30,7 @@ export const Modal = ({ handleClose }) => {
       <div className="flex items-center justify-center min-h-screen">
         <div className="flex flex-col bg-slate-200 z-20 p-6 rounded-lg shadow-inner">
           <Dialog.Title className="font-inconsolata text-xl text-bright-red font-semibold">
-            Here's why you should hire a Junior Dev:
+            Here's why you should hire a Junior Dev (like me):
           </Dialog.Title>
           <ul>{listItems}</ul>
 
