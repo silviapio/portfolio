@@ -1,7 +1,15 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
+  "name": "silvia-portfolio",
+  "version": "1.0.0 beta",
   "private": true,
+  "description": "Silvia's portfolio",
+  "author": "Silvia Piovesan",
+  "license": "MIT",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silviapio/portfolio.git"
+  },
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
     "@headlessui/react": "^1.5.0",
