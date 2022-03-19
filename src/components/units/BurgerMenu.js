@@ -25,7 +25,7 @@ var styles = {
   bmMenuWrap: {
     position: "fixed",
     height: "100%",
-    width: "100%",
+    width: "200px",
     opacity: "0.95",
   },
   bmMenu: {
@@ -60,7 +60,7 @@ export const BurgerMenu = ({ isVisible }) => {
   return (
     <>
       {isVisible && (
-        <Menu noOverlay customCrossIcon={false} onStateChange={toggleMenuAria} right styles={styles}>
+        <Menu customCrossIcon={false} onStateChange={toggleMenuAria} right styles={styles}>
           <a className="menu-item" href="#skillsSection">
             skills
           </a>

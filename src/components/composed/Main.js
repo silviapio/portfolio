@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
+import { debounce } from "lodash";
 import { Hero } from "./Hero";
 import { AboutSection } from "./AboutSection";
 import { SkillsSection } from "./SkillsSection";
@@ -20,24 +21,37 @@ export const Main = () => {
 
   const controlBurger = () => {
     if (typeof window !== "undefined") {
-      if (window.scrollY > lastScrollY) {
-        // if scroll down hide the burger
-        setShowBurger(false);
-      } else {
-        // if scroll up show the burger
+      if (window.pageYOffset < 150) {
         setShowBurger(true);
+      } else {
+        if (window.pageYOffset > lastScrollY) {
+          // if scroll down hide the navbar
+          setShowBurger(false);
+        } else {
+          // if scroll up show the navbar
+          setShowBurger(true);
+        }
       }
       // remember current page location to use in the next move
       setLastScrollY(window.scrollY);
     }
   };
 
+  const controlBurgerWhenNavigating = e => {
+    setTimeout(() => {
+      setShowBurger(false);
+    }, 100);
+  };
+
   useEffect(() => {
     if (typeof window !== "undefined") {
-      window.addEventListener("scroll", controlBurger);
+      const debouncedControlBurger = debounce(controlBurger, 500, { leading: true, trailing: false });
+      window.addEventListener("scroll", debouncedControlBurger);
+      window.addEventListener("hashchange", controlBurgerWhenNavigating);
       // cleanup function
       return () => {
-        window.removeEventListener("scroll", controlBurger);
+        window.removeEventListener("scroll", debouncedControlBurger);
+        window.addEventListener("hashchange", controlBurgerWhenNavigating);
       };
     }
     // eslint-disable-next-line

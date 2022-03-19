@@ -9,7 +9,6 @@
     @apply font-notosans;
     @apply w-full;
     @apply h-full;
-    @apply scroll-smooth;
   }
   body {
     @apply bg-slate-50;
