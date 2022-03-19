@@ -2,7 +2,7 @@ export const ProjectCard = ({ imgSrc, altText, title, body, skills, learningsTex
   return (
     <div className="flex flex-col bg-slate-50 rounded-md m-4 py-2 px-3 max-w-md md:max-w-lg 2xl:max-w-xl">
       <h3 className="my-2 text-2xl text-bright-red-text font-semibold font-inconsolata">{title}</h3>
-      <img src={imgSrc} alt={altText} className="rounded" />
+      <img src={imgSrc} alt={altText} className="rounded" loading="lazy" />
       <p className="font-medium whitespace-pre-line mt-2">{body}</p>
       <p className="text-lg text-bright-red-text font-medium mt-2">{`Built with ${skills}`}</p>
       {learningsText && (
