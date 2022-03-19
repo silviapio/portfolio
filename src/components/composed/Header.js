@@ -1,44 +1,22 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Navbar } from "../units/Navbar";
 import { debounce } from "lodash";
+import { useScroll } from "../../hooks/useScroll";
 
 export const Header = () => {
   const isTabletOrLarger = useMediaQuery({ query: "(min-width: 640px)" });
-  const [show, setShow] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  const controlNavbar = () => {
-    if (typeof window !== "undefined") {
-      if (window.pageYOffset < 150) {
-        setShow(true);
-      } else {
-        if (window.pageYOffset > lastScrollY) {
-          // if scroll down hide the navbar
-          setShow(false);
-        } else {
-          // if scroll up show the navbar
-          setShow(true);
-        }
-      }
-    }
-    // remember current page location to use in the next move
-    setLastScrollY(window.scrollY);
-  };
-
-  const controlNavbarWhenNavigating = e => {
-    setTimeout(() => setShow(false), 100);
-  };
+  const { showMenu, lastScrollY, controlMenu, hideMenuWhenNavigating, showMenuAfterTimeout } = useScroll(true, 0);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const debouncedControlNavbar = debounce(controlNavbar, 500, { leading: true, trailing: false });
+      const debouncedControlNavbar = debounce(controlMenu, 500, { leading: true, trailing: false });
       window.addEventListener("scroll", debouncedControlNavbar);
-      window.addEventListener("hashchange", controlNavbarWhenNavigating);
+      window.addEventListener("hashchange", hideMenuWhenNavigating);
       // cleanup function
       return () => {
         window.removeEventListener("scroll", debouncedControlNavbar);
-        window.removeEventListener("hashchange", controlNavbarWhenNavigating);
+        window.removeEventListener("hashchange", hideMenuWhenNavigating);
       };
     }
     // eslint-disable-next-line
@@ -46,10 +24,10 @@ export const Header = () => {
 
   const scrollToTop = () => {
     window.scrollTo(0, 0);
-    setTimeout(() => setShow(true), 50);
+    showMenuAfterTimeout();
   };
 
-  const getVisibilityClass = () => (show ? "" : "invisible");
+  const getVisibilityClass = () => (showMenu ? "" : "invisible");
 
   return (
     <header

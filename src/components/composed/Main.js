@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { debounce } from "lodash";
+import { useScroll } from "../../hooks/useScroll";
 import { Hero } from "./Hero";
 import { AboutSection } from "./AboutSection";
 import { SkillsSection } from "./SkillsSection";
@@ -16,42 +17,18 @@ export const Main = () => {
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
 
   const isTabletOrLarger = useMediaQuery({ query: "(min-width: 640px)" });
-  const [showBurger, setShowBurger] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
-  const controlBurger = () => {
-    if (typeof window !== "undefined") {
-      if (window.pageYOffset < 150) {
-        setShowBurger(true);
-      } else {
-        if (window.pageYOffset > lastScrollY) {
-          // if scroll down hide the navbar
-          setShowBurger(false);
-        } else {
-          // if scroll up show the navbar
-          setShowBurger(true);
-        }
-      }
-      // remember current page location to use in the next move
-      setLastScrollY(window.scrollY);
-    }
-  };
-
-  const controlBurgerWhenNavigating = e => {
-    setTimeout(() => {
-      setShowBurger(false);
-    }, 100);
-  };
+  const { showMenu, lastScrollY, controlMenu, hideMenuWhenNavigating } = useScroll(true, 0);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const debouncedControlBurger = debounce(controlBurger, 500, { leading: true, trailing: false });
+      const debouncedControlBurger = debounce(controlMenu, 500, { leading: true, trailing: false });
       window.addEventListener("scroll", debouncedControlBurger);
-      window.addEventListener("hashchange", controlBurgerWhenNavigating);
+      window.addEventListener("hashchange", hideMenuWhenNavigating);
       // cleanup function
       return () => {
         window.removeEventListener("scroll", debouncedControlBurger);
-        window.addEventListener("hashchange", controlBurgerWhenNavigating);
+        window.addEventListener("hashchange", hideMenuWhenNavigating);
       };
     }
     // eslint-disable-next-line
@@ -65,7 +42,7 @@ export const Main = () => {
     }
   }, []);
 
-  const getVisibilityClass = () => (showBurger ? "" : "invisible");
+  const getVisibilityClass = () => (showMenu ? "" : "invisible");
 
   const openJuniorDevModal = () => {
     setIsJuniorDevModalOpen(true);
@@ -84,10 +61,10 @@ export const Main = () => {
   };
 
   return (
-    <main className="flex flex-col mt-20 items-start">
+    <main className="flex flex-col mt-[72px] items-start">
       {isTabletOrLarger ? null : isContactDialogOpen || isJuniorDevModalOpen ? null : (
         <div className={getVisibilityClass()}>
-          <BurgerMenu isVisible={showBurger} />
+          <BurgerMenu isVisible={showMenu} />
         </div>
       )}
       {isJuniorDevModalOpen && <Modal handleClose={handleJuniorDevClose} />}

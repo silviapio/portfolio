@@ -2,7 +2,7 @@ import profileImg from "../../assets/silvia_cut.png";
 
 export const Hero = () => {
   return (
-    <div className="max-w-screen-lg flex flex-col items-center self-center mt-10 mb-6 mx-8 sm:flex-row sm:mx-12">
+    <div className="max-w-screen-lg flex flex-col items-center self-center mt-10 mb-6 mx-8 sm:flex-row sm:mx-12 pt-8">
       <div className="rounded-full max-w-[250px] h-auto rounded-full">
         <img className="rounded-full w-full" src={profileImg} alt="silvia's sketch" />
       </div>
