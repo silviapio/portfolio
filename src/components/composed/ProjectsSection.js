@@ -27,25 +27,6 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Reactube",
-    body: `Single Page Application built as last assignment of the IT Academy bootcamp. 
-    It was my very first time dealing with a React application consuming API data. I was quite happy of the result as I built it without watching any tutorials.  
-    It's an home-made clone of YouTube, allowing the user to favorite their videos and to keep a record of the last videos that were displayed. It consumes data from YouTube API.`,
-    skills: "React.js, JavaScript, HTML, CSS, React Router, API, Styled Components",
-    imgSrc: reactube,
-    altText: "snapshots of Reactube in different devices",
-    learningsText: `This app was a good challenge to do at the end of a bootcamp which marked my first approach to programming.
-    My learnings:
-    ✔ YouTube API has an incredible complexity, though the docs help a lot (this is generally a rule for APIs)
-    ✔ writing reusable and clean code greatly reduces the "nightmare feeling" when you have to refactor it later
-    ✔ starting to code without a clear idea of a design means complicating the development
-    ✔ the logic behind a search app is not as simple as it may seem!  
-    `,
-    demoLink: "https://reactube-silvia.herokuapp.com/",
-    codebaseLink: "https://github.com/silviapio/r9-reactube",
-  },
-  {
-    id: 3,
     title: "Speed Typing Game",
     body: `Simple Speed Typing Game built during the React Bootcamp course on Scrimba. 
     When the user clicks start, they can type in as many words as they can; at the end of the timer, the program counts the valid (English) words typed and displays the score in words per minute.
@@ -63,7 +44,7 @@ const projectsData = [
     codebaseLink: "https://github.com/silviapio/speed-typing-game",
   },
   {
-    id: 4,
+    id: 3,
     title: "Portfolio",
     body: `Yeah, this website :)
     At first I didn't want to include it in here, it felt a bit like an infinite loop.
@@ -80,6 +61,25 @@ const projectsData = [
     `,
     demoLink: "",
     codebaseLink: "https://github.com/silviapio/portfolio",
+  },
+  {
+    id: 2,
+    title: "Reactube",
+    body: `Single Page Application built as last assignment of the IT Academy bootcamp. 
+    It was my very first time dealing with a React application consuming API data. I was quite happy of the result as I built it without watching any tutorials.  
+    It's an home-made clone of YouTube, allowing the user to favorite their videos and to keep a record of the last videos that were displayed. It consumes data from YouTube API.`,
+    skills: "React.js, JavaScript, HTML, CSS, React Router, API, Styled Components",
+    imgSrc: reactube,
+    altText: "snapshots of Reactube in different devices",
+    learningsText: `This app was a good challenge to do at the end of a bootcamp which marked my first approach to programming.
+    My learnings:
+    ✔ YouTube API has an incredible complexity, though the docs help a lot (this is generally a rule for APIs)
+    ✔ writing reusable and clean code greatly reduces the "nightmare feeling" when you have to refactor it later
+    ✔ starting to code without a clear idea of a design means complicating the development
+    ✔ the logic behind a search app is not as simple as it may seem!  
+    `,
+    demoLink: "https://reactube-silvia.herokuapp.com/",
+    codebaseLink: "https://github.com/silviapio/r9-reactube",
   },
 ];
 

@@ -1,11 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { ContactForm } from "./ContactForm";
 
 export const ContactDialog = ({ handleClose }) => {
   let [isOpen, setIsOpen] = useState(true);
-
-  useEffect(() => window.scrollTo(0, 0), []);
 
   const close = () => {
     setIsOpen(false);

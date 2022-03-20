@@ -17,7 +17,7 @@ export const ProjectCard = ({ imgSrc, altText, title, body, skills, learningsTex
             href={demoLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-dark-slate text-slate-50 hover:bg-slate-900 hover:drop-shadow-lg focus:bg-slate-900 focus:drop-shadow-lg focus:outline-1 outline-current rounded-md my-2 mx-1 px-3 py-2 text-lg hover:cursor-pointer"
+            className="bg-dark-slate text-slate-50 hover:bg-slate-900 hover:drop-shadow-lg hover:underline focus:underline focus:bg-slate-900 focus:drop-shadow-lg focus:outline-1 outline-current rounded-md my-2 mx-1 px-3 py-2 text-lg hover:cursor-pointer"
           >
             demo
           </a>
@@ -27,7 +27,7 @@ export const ProjectCard = ({ imgSrc, altText, title, body, skills, learningsTex
             href={codebaseLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-slate-50 text-dark-slate font-semibold hover:bg-white hover:drop-shadow-md hover:text-slate-900 focus:bg-white focus:drop-shadow-md hover:text-slate-900 border-2 border-dark-slate focus:outline-1 outline-current rounded-md my-2 mx-1 px-2 pt-[6px] pb-1 text-lg hover:cursor-pointer"
+            className="bg-slate-50 text-dark-slate font-semibold hover:bg-white hover:drop-shadow-md hover:text-slate-900 hover:underline focus:underline focus:bg-white focus:drop-shadow-md hover:text-slate-900 border-2 border-dark-slate focus:outline-1 outline-current rounded-md my-2 mx-1 px-2 pt-[6px] pb-1 text-lg hover:cursor-pointer"
           >
             codebase
           </a>
