@@ -15,6 +15,6 @@ export const Footer = () => (
     <Icon className="mx-1">
       <BiCopyright />
     </Icon>
-    <p>2022 v1.1.1</p>
+    <p>2022 v1.1.2</p>
   </div>
 );
