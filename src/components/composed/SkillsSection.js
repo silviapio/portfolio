@@ -135,7 +135,6 @@ export const SkillsSection = () => {
       <div className="flex flex-col">
         <p className="px-2">Here's what I've used so far:</p>
         <div className="flex flex-wrap">{skills}</div>
-        <p className="px-2 mt-2">Missing anything? Please reach out and let me know, I'll give it a try!</p>
       </div>
     </section>
   );

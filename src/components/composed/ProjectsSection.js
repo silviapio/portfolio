@@ -48,16 +48,17 @@ const projectsData = [
     title: "Portfolio",
     body: `Yeah, this website :)
     At first I didn't want to include it in here, it felt a bit like an infinite loop.
-    But then, I developed it completely from scratch (no templates - minimal dependencies), and I challenged myself with the form validation, the email sending, and a CSS framework I had never used before.
-    I particularly like the final result, so I figured it earned a place in this section.`,
+    But then, I developed it completely from scratch (no templates - minimal dependencies), and I challenged myself with the form validation, the email sending, and a CSS framework I had never used before. It was also my first time deploying with a custom domain.
+    I particularly liked the final result, so I figured it earned a place in this section.`,
     skills: "React.js, JavaScript, HTML, CSS, Tailwind CSS, EmailJS",
     imgSrc: portfolio,
     altText: "snapshots of this website in different devices",
     learningsText: `I really enjoyed the journey of developing this website. Here's what I learned:
     ✔ always get the design (mobile, desktop) ready before coding
     ✔ I prefer to code my own forms rather than use libraries
-    ✔ being able to program instead of using templates, it's an extremely powerful tool to make things that you really like    
-    ✔ a developer's portfolio reflects their personality. As in, can you tell I like colors? ;)
+    ✔ being able to program instead of using templates, it's an extremely powerful tool to make things that you really like 
+    ✔ never say "I'm almost done" because that "almost" can easily approach infinity   
+    ✔ a developer's portfolio reflects their personality. As in, can you tell I like colors and writing? ;)
     `,
     demoLink: "",
     codebaseLink: "https://github.com/silviapio/portfolio",
@@ -66,7 +67,7 @@ const projectsData = [
     id: 4,
     title: "Reactube",
     body: `Single Page Application built as last assignment of the IT Academy bootcamp. 
-    It was my very first time dealing with a React application consuming API data. I was quite happy of the result as I built it without watching any tutorials.  
+    It was my very first time dealing with a React application more complex than a counter or to-do list. I was quite proud of the result as I built it without watching any tutorials.  
     It's an home-made clone of YouTube, allowing the user to favorite their videos and to keep a record of the last videos that were displayed. It consumes data from YouTube API.`,
     skills: "React.js, JavaScript, HTML, CSS, React Router, API, Styled Components",
     imgSrc: reactube,

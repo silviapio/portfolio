@@ -61,7 +61,7 @@ export const Main = () => {
   };
 
   return (
-    <main className="flex flex-col mt-[72px] items-start">
+    <main className="flex flex-col mt-[72px] items-start text-dark-slate">
       {isTabletOrLarger ? null : isContactDialogOpen || isJuniorDevModalOpen ? null : (
         <div className={getVisibilityClass()}>
           <BurgerMenu isVisible={showMenu} />
