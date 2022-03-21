@@ -5,7 +5,7 @@ import { useScroll } from "../../hooks/useScroll";
 import { Hero } from "./Hero";
 import { AboutSection } from "./AboutSection";
 import { SkillsSection } from "./SkillsSection";
-import { Modal } from "./Modal";
+import { JuniorDevDialog } from "./JuniorDevDialog";
 import { ProjectsSection } from "./ProjectsSection";
 import { ContactSection } from "./ContactsSection";
 import { LastTextSection } from "./LastTextSection";
@@ -67,7 +67,7 @@ export const Main = () => {
           <BurgerMenu isVisible={showMenu} />
         </div>
       )}
-      {isJuniorDevModalOpen && <Modal handleClose={handleJuniorDevClose} />}
+      {isJuniorDevModalOpen && <JuniorDevDialog handleClose={handleJuniorDevClose} />}
       {isContactDialogOpen && <ContactDialog handleClose={handleContactDialogClose} />}
       <Hero />
       <SkillsSection />
