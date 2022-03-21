@@ -3,6 +3,7 @@ import { useMediaQuery } from "react-responsive";
 import { InputText } from "../units/InputText";
 import { Button } from "../units/Button";
 import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from "@emailjs/browser";
 
 export const ContactForm = ({ closeFunction }) => {
   const isTabletOrLarger = useMediaQuery({ query: "(min-width: 640px)" });
@@ -86,12 +87,24 @@ export const ContactForm = ({ closeFunction }) => {
     if (errorFound) {
       return;
     } else {
-      console.log(formData.user_name, formData.user_email, formData.message);
       setShowLoader(true);
-      setTimeout(() => {
-        setResponseReceived("ERROR");
-        setShowLoader(false);
-      }, 2000);
+      emailjs
+        .send(
+          "default_service",
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+          formData,
+          process.env.REACT_APP_EMAILJS_USER_ID
+        )
+        .then(
+          result => {
+            setShowLoader(false);
+            setResponseReceived("OK");
+          },
+          error => {
+            setShowLoader(false);
+            setResponseReceived("ERROR");
+          }
+        );
     }
   };
 

@@ -29,3 +29,6 @@ copy_draft.js
 
 # private
 .env
+
+# Local Netlify folder
+.netlify
