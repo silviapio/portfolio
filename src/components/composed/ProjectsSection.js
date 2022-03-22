@@ -15,8 +15,7 @@ const projectsData = [
     skills: "React.js, JavaScript, HTML, CSS, React Router, API, Styled Components",
     imgSrc: mwc22,
     altText: "snapshots of MWC22 app in phone, tablet, desktop devices",
-    learningsText: `This was my first time participating in a hackathon, and therefore building and deploying something from scratch only in a few days, and yet it was surprisingly good.
-    My learnings:
+    learningsText: `✔ it was surprisingly good participating in a hackathon, building and deploying something from scratch in a few days 
     ✔ prioritizing features and coding efforts when time is scarce, is really vital
     ✔ writing consistent documentation is essential yet also time-consuming
     ✔ form validation has a steep learning curve, however once you understand one, you got them all
@@ -34,11 +33,10 @@ const projectsData = [
     skills: "React.js, JavaScript, HTML, CSS, API",
     imgSrc: speedtyping,
     altText: "snapshots of speed typing game in different devices",
-    learningsText: `This game was built totally spontaneously, I really enjoyed the process of adding features of my liking.
-    My learnings:
-    ✔ behind a "trivial" application there can be a fair amount of logic, as in this case
-    ✔ keeping a usable and consistent UI is not an easy task
-    ✔ adding features that I deem necessary or nice-to-have is really enjoyable
+    learningsText: `✔ behind a "trivial" application there can be a fair amount of logic, as in this case
+    ✔ keeping a usable and consistent UI is not an easy task, even in a simple app
+    ✔ adding features that I deem necessary or nice-to-have is a true creative task
+    ✔ it was also nice for once, to build something to play with
     `,
     demoLink: "https://silviapio.github.io/speed-typing-game/",
     codebaseLink: "https://github.com/silviapio/speed-typing-game",
@@ -53,7 +51,7 @@ const projectsData = [
     skills: "React.js, JavaScript, HTML, Tailwind CSS, EmailJS",
     imgSrc: portfolio,
     altText: "snapshots of this website in different devices",
-    learningsText: `I really enjoyed the journey of developing this website. Here's what I learned:
+    learningsText: `✔ the journey of developing a website at your liking can be extremely enjoyable
     ✔ always get the design (mobile, desktop) ready before coding
     ✔ I prefer to code my own forms rather than use libraries
     ✔ being able to program instead of using templates, it's an extremely powerful tool to make things that you really like 
@@ -72,9 +70,7 @@ const projectsData = [
     skills: "React.js, JavaScript, HTML, CSS, React Router, API, Styled Components",
     imgSrc: reactube,
     altText: "snapshots of Reactube in different devices",
-    learningsText: `This app was a good challenge to do at the end of a bootcamp which marked my first approach to programming.
-    My learnings:
-    ✔ YouTube API has an incredible complexity, though the docs help a lot (this is generally a rule for APIs)
+    learningsText: `✔ YouTube API has an incredible complexity, though the docs help a lot (this is generally a rule for APIs)
     ✔ writing reusable and clean code greatly reduces the "nightmare feeling" when you have to refactor it later
     ✔ starting to code without a clear idea of a design means complicating the development
     ✔ the logic behind a search app is not as simple as it may seem!  
