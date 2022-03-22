@@ -19,14 +19,14 @@ export const AboutSection = ({ openDialogFunction }) => {
           href="https://www.linkedin.com/in/silvia-piovesan/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-lg text-bright-red-text font-semibold hover:underline hover:decoration-2 focus:outline-dark-slate"
+          className="text-lg text-bright-red-text font-semibold hover:underline hover:decoration-2 focus:outline-bright-red-text"
         >
           my LinkedIn
         </a>{" "}
         to know more.
       </p>
       <details>
-        <summary className="mt-3 pl-2 sm:text-lg font-semibold cursor-pointer hover:underline">
+        <summary className="mt-3 px-2 max-w-fit sm:text-lg font-semibold cursor-pointer hover:underline">
           I'm currently learning...
         </summary>
         <ul className="ml-10 sm:text-lg list-disc">
@@ -43,7 +43,7 @@ export const AboutSection = ({ openDialogFunction }) => {
         </ul>
       </details>
       <details>
-        <summary className="mt-3 pl-2 sm:text-lg font-semibold cursor-pointer hover:underline">
+        <summary className="mt-3 px-2 max-w-fit sm:text-lg font-semibold cursor-pointer hover:underline">
           My philosophy is...
         </summary>
         <ul className="ml-10 sm:text-lg list-disc">

@@ -11,16 +11,16 @@ const projectsData = [
     title: "MWC22-4YFN Hackathon",
     body: `Single Page Application built for the Mobile World Congress 2022 - 4YFN Hackathon. 
     This application ranked 6/79 for the Front End challenge, winning a partecipation to the in-person group finale.
-    It's a profile creator with form validation and avatar generator (consuming data from Dicebear API), built with React.js and React Router to help navigate through the screens (welcome page, form, profile viewer), and using LocalStorage API for data.`,
+    It's a profile creator with form validation entirely built from scratch and avatar generator (consuming data from Dicebear API), built with React.js and React Router to help navigate through the screens (welcome page, form, profile viewer), and using LocalStorage API for data.`,
     skills: "React.js, JavaScript, HTML, CSS, React Router, API, Styled Components",
     imgSrc: mwc22,
     altText: "snapshots of MWC22 app in phone, tablet, desktop devices",
     learningsText: `This was my first time participating in a hackathon, and therefore building and deploying something from scratch only in a few days, and yet it was surprisingly good.
     My learnings:
-    ✔ prioritizing features and coding efforts when time is scarce, is really essential
+    ✔ prioritizing features and coding efforts when time is scarce, is really vital
     ✔ writing consistent documentation is essential yet also time-consuming
     ✔ form validation has a steep learning curve, however once you understand one, you got them all
-    ✔ accessibility is an important topic for me; it wasn't a requirement in this case but I tried my best to keep the app accessible    
+    ✔ accessibility is an important topic for me; it wasn't a requirement in this case but I tried to keep the app accessible    
     `,
     demoLink: "https://silviapio.github.io/mwc22",
     codebaseLink: "https://github.com/silviapio/mwc22",
@@ -29,8 +29,8 @@ const projectsData = [
     id: 2,
     title: "Speed Typing Game",
     body: `Simple Speed Typing Game built during the React Bootcamp course on Scrimba. 
-    When the user clicks start, they can type in as many words as they can; at the end of the timer, the program counts the valid (English) words typed and displays the score in words per minute.
-    I added some features the original task, such as consuming data from an API to check if words are valid, allowing the user to edit time allowed, the storage of the best score in words per minute, the reset/restart button, and some checks to discourage cheating :)`,
+    When the user clicks start, they should type in as many words as they can; at the end of the timer, the program counts the valid (English) words inserted and displays the score in words per minute.
+    I added some features to the original task: checking if words are valid through an API, making time allowed editable by users, saving the best score in words per minute, the reset/restart button, and some checks to discourage cheating :)`,
     skills: "React.js, JavaScript, HTML, CSS, API",
     imgSrc: speedtyping,
     altText: "snapshots of speed typing game in different devices",
@@ -50,7 +50,7 @@ const projectsData = [
     At first I didn't want to include it in here, it felt a bit like an infinite loop.
     But then, I developed it completely from scratch (no templates - minimal dependencies), and I challenged myself with the form validation, the email sending, and a CSS framework I had never used before. It was also my first time deploying with a custom domain.
     I particularly liked the final result, so I figured it earned a place in this section.`,
-    skills: "React.js, JavaScript, HTML, CSS, Tailwind CSS, EmailJS",
+    skills: "React.js, JavaScript, HTML, Tailwind CSS, EmailJS",
     imgSrc: portfolio,
     altText: "snapshots of this website in different devices",
     learningsText: `I really enjoyed the journey of developing this website. Here's what I learned:
@@ -58,7 +58,7 @@ const projectsData = [
     ✔ I prefer to code my own forms rather than use libraries
     ✔ being able to program instead of using templates, it's an extremely powerful tool to make things that you really like 
     ✔ never say "I'm almost done" because that "almost" can easily approach infinity   
-    ✔ a developer's portfolio reflects their personality. As in, can you tell I like colors and writing? ;)
+    ✔ a developer's portfolio often reflects their personality. As in, could you tell I like colors and writing? ;)
     `,
     demoLink: "",
     codebaseLink: "https://github.com/silviapio/portfolio",
@@ -68,7 +68,7 @@ const projectsData = [
     title: "Reactube",
     body: `Single Page Application built as last assignment of the IT Academy bootcamp. 
     It was my very first time dealing with a React application more complex than a counter or to-do list. I was quite proud of the result as I built it without watching any tutorials.  
-    It's an home-made clone of YouTube, allowing the user to favorite their videos and to keep a record of the last videos that were displayed. It consumes data from YouTube API.`,
+    It's an home-made clone of YouTube, allowing the user to favorite their videos and to keep a record of the last searches and the last videos that were displayed. It consumes data directly from YouTube API.`,
     skills: "React.js, JavaScript, HTML, CSS, React Router, API, Styled Components",
     imgSrc: reactube,
     altText: "snapshots of Reactube in different devices",

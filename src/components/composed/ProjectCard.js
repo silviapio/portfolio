@@ -7,7 +7,7 @@ export const ProjectCard = ({ imgSrc, altText, title, body, skills, learningsTex
       <p className="text-lg text-bright-red-text font-medium mt-2">{`Built with ${skills}`}</p>
       {learningsText && (
         <details className="my-2 font-medium text-dark-slate whitespace-pre-line">
-          <summary className="my-2 font-semibold cursor-pointer">See my learnings</summary>
+          <summary className="my-2 px-2 max-w-fit font-semibold cursor-pointer">See my learnings</summary>
           {learningsText}
         </details>
       )}
