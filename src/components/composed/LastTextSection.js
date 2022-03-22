@@ -1,13 +1,13 @@
 import { SectionTitle } from "../units/SectionTitle";
 import { Icon } from "../units/Icon";
 import { lastSectionBulletPoints } from "../../assets/copy";
-import { BsEmojiSunglasses } from "react-icons/bs";
+import { BsFillLightningFill } from "react-icons/bs";
 
 export const LastTextSection = () => {
   const listItems = lastSectionBulletPoints.map((item, index) => (
     <li key={index} className="flex flex-row items-start sm:text-lg my-2">
       <Icon className="mt-1 mr-2" color="var(--bright-red-text)" title="smile">
-        <BsEmojiSunglasses />
+        <BsFillLightningFill />
       </Icon>
       <p>{item}</p>
     </li>
