@@ -3,7 +3,7 @@ import { Button } from "../units/Button";
 
 export const AboutSection = ({ openDialogFunction }) => {
   return (
-    <section id="aboutSection" className="mt-10 mb-8 px-4 md:mx-12 2xl:mx-28">
+    <section id="aboutSection" className="mt-10 mb-8 px-4 md:mx-12 2xl:mx-36">
       <SectionTitle titleText="...about" />
       <p className="px-2 sm:text-lg">Economist by university, Front End Developer by passion.</p>
       <p className="px-2 sm:text-lg">

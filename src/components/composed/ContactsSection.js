@@ -6,7 +6,7 @@ import { SiLinkedin, SiTwitter, SiGithub } from "react-icons/si";
 
 export const ContactSection = ({ openDialogFunction }) => {
   return (
-    <section id="contactsSection" className="flex flex-col items-start py-2 mt-8 px-4 md:mx-12 2xl:mx-28">
+    <section id="contactsSection" className="flex flex-col items-start py-2 mt-8 px-4 md:mx-12 2xl:mx-36">
       <SectionTitle titleText="...contacts" />
       <div className="px-2">
         <p className="text-lg mb-1">Let's connect! How, it's totally up to you:</p>

@@ -1,23 +1,25 @@
 import { SectionTitle } from "../units/SectionTitle";
+import { Icon } from "../units/Icon";
+import { lastSectionBulletPoints } from "../../assets/copy";
+import { BsEmojiSunglasses } from "react-icons/bs";
 
 export const LastTextSection = () => {
+  const listItems = lastSectionBulletPoints.map((item, index) => (
+    <li key={index} className="flex flex-row items-start sm:text-lg my-2">
+      <Icon className="mt-1 mr-2" color="var(--bright-red-text)" title="smile">
+        <BsEmojiSunglasses />
+      </Icon>
+      <p>{item}</p>
+    </li>
+  ));
+
   return (
-    <section className="my-8 px-4 md:mx-12 2xl:mx-28">
+    <section className="my-8 px-4 md:mx-12 2xl:mx-36">
       <SectionTitle titleText="...dulcis in fundo" />
       <p className="px-2 sm:text-lg">
-        (placeholder text, copy is in progress!) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Nibh praesent tristique magna sit. Elit at imperdiet dui
-        accumsan sit. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin. Lacinia at quis risus sed
-        vulputate odio ut. Facilisi cras fermentum odio eu. Neque gravida in fermentum et sollicitudin ac orci phasellus
-        egestas. Bibendum est ultricies integer quis auctor elit sed. Viverra vitae congue eu consequat ac felis donec.
-        Eget nunc lobortis mattis aliquam.
+        As much as I love writing, I couldn't let you leave without sharing some fun facts:
       </p>
-      <p className="px-2 sm:text-lg">I won't let you leave without knowing some fun facts about me:</p>
-      <p className="px-2 sm:text-lg">I went hiking on the Camino de Santiago 4 times 🚶‍♀️ Totally recommended!</p>
-      <p className="px-2 sm:text-lg">
-        I was a swimmer when teenager and I worked as a swimming trainer while attending university 🏊🏽
-      </p>
-      <p className="px-2 sm:text-lg">I'm Italian, and my favorite dish is indeed pizza! 🍕</p>
+      <ul className="my-2 px-2">{listItems}</ul>
     </section>
   );
 };
