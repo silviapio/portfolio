@@ -21,11 +21,11 @@ I built the form validation totally from scratch, and also challenged myself wit
 
 I plan to add some features, see [my to-do list](#📔-my-to-do-list) below.
 
-I worked hard to make this website fully accessible (if you know me, you'll know also I consider that very important). I hope I have reached the goal, if you have some feedback on that, I'd be delighted to receive it!
+I worked hard to make this website fully accessible (if you know me, you'll know also I consider that very important). I hope I have reached the goal; if you have some feedback on that, I'd be delighted to receive it!
 
 ## 👩‍💻 Developer's info
 
-For the time being, the website is personal so I guess there's no point in cloning/forking it (as a matter of fact, I've disabled forking).
+For the time being, the website is personal so I guess there's no point in cloning/forking it.
 
 My plan is to clean up the code a little bit and leave this as an open source template for fellow developers that want to use it or just be inspired.
 
