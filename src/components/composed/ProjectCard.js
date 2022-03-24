@@ -1,16 +1,32 @@
-export const ProjectCard = ({ imgSrc, altText, title, body, skills, learningsText, demoLink, codebaseLink }) => {
+export const ProjectCard = ({
+  imgSrc,
+  altText,
+  title,
+  body,
+  extraText,
+  skills,
+  learningsText,
+  demoLink,
+  codebaseLink,
+}) => {
   return (
-    <div className="flex flex-col bg-slate-50 rounded-md m-4 py-2 px-3 max-w-md md:max-w-lg 2xl:max-w-xl">
+    <div className="flex flex-col bg-slate-50 rounded-md my-4 mx-2 py-2 px-3 sm:py-4 sm:px-8 max-w-md md:max-w-lg 2xl:max-w-xl">
       <h3 className="my-2 text-2xl text-bright-red-text font-semibold font-inconsolata">{title}</h3>
       <img src={imgSrc} alt={altText} className="rounded" loading="lazy" />
-      <p className="font-medium whitespace-pre-line mt-2">{body}</p>
-      <p className="text-lg text-bright-red-text font-medium mt-2">{`Built with ${skills}`}</p>
+      <p className="font-medium whitespace-pre-line mt-6 mb-4 sm:text-lg">{body}</p>
+      {extraText && (
+        <details className="my-2 font-medium text-dark-slate whitespace-pre-line">
+          <summary className="sm:text-lg mb-2 max-w-fit font-semibold cursor-pointer">Read more...</summary>
+          {extraText}
+        </details>
+      )}
       {learningsText && (
-        <details className="my-2 px-2 font-medium text-dark-slate whitespace-pre-line">
-          <summary className="mb-2 max-w-fit font-semibold cursor-pointer">See my learnings</summary>
+        <details className="my-2 font-medium text-dark-slate whitespace-pre-line">
+          <summary className="sm:text-lg mb-2 max-w-fit font-semibold cursor-pointer">See my learnings...</summary>
           {learningsText}
         </details>
       )}
+      <p className="sm:text-lg text-bright-red-text font-medium my-2">{`Built with ${skills}`}</p>
       <div className="flex justify-end mt-auto">
         {demoLink && (
           <a
