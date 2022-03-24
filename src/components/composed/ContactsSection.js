@@ -6,12 +6,15 @@ import { SiLinkedin, SiTwitter, SiGithub } from "react-icons/si";
 
 export const ContactSection = ({ openDialogFunction }) => {
   return (
-    <section id="contactsSection" className="flex flex-col items-start py-2 mt-10 px-4 md:mx-12 2xl:mx-36">
+    <section
+      id="contactsSection"
+      className="mt-10 flex flex-col items-start py-2 px-4 sm:mx-4 md:mx-12 lg:mx-24 2xl:mx-36"
+    >
       <SectionTitle titleText="...contacts" />
       <div className="px-2">
-        <p className="text-lg mb-1">Let's connect! How, it's totally up to you:</p>
+        <p className="mb-1 text-lg">Let's connect! How, it's totally up to you:</p>
         <div className="flex flex-row items-center">
-          <Icon className="mt-[1px] w-[18px] h-[18px]" color="var(--bright-red-text)">
+          <Icon className="mt-[1px] h-[18px] w-[18px]" color="var(--bright-red-text)">
             <AiTwotoneMail />
           </Icon>
           <p className="ml-2 text-lg">Email:</p>
@@ -31,12 +34,12 @@ export const ContactSection = ({ openDialogFunction }) => {
             href="https://www.linkedin.com/in/silvia-piovesan/"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-2 text-lg text-bright-red-text font-semibold hover:underline hover:decoration-2 focus:outline-bright-red-text"
+            className="ml-2 text-lg font-semibold text-bright-red-text hover:underline hover:decoration-2 focus:outline-bright-red-text"
           >
             connect with me
           </a>
         </div>
-        <div className="flex flex-row items-center my-2 py-1">
+        <div className="my-2 flex flex-row items-center py-1">
           <Icon color="var(--bright-red-text)">
             <SiGithub />
           </Icon>
@@ -45,12 +48,12 @@ export const ContactSection = ({ openDialogFunction }) => {
             href="https://github.com/silviapio"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-2 text-lg text-bright-red-text font-semibold hover:underline hover:decoration-2 focus:outline-bright-red-text"
+            className="ml-2 text-lg font-semibold text-bright-red-text hover:underline hover:decoration-2 focus:outline-bright-red-text"
           >
             visit my profile
           </a>
         </div>
-        <div className="flex flex-row items-center mt-2 py-1">
+        <div className="mt-2 flex flex-row items-center py-1">
           <Icon color="var(--bright-red-text)">
             <SiTwitter />
           </Icon>
@@ -59,7 +62,7 @@ export const ContactSection = ({ openDialogFunction }) => {
             href="https://twitter.com/silvia_piov"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-2 text-lg text-bright-red-text font-semibold hover:underline hover:decoration-2 focus:outline-bright-red-text"
+            className="ml-2 text-lg font-semibold text-bright-red-text hover:underline hover:decoration-2 focus:outline-bright-red-text"
           >
             follow me
           </a>

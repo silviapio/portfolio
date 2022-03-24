@@ -31,12 +31,12 @@ export const Header = () => {
 
   return (
     <header
-      className={`${getVisibilityClass()} w-full md:px-16 flex justify-between items-center px-6 fixed top-0 z-20 bg-slate-50`}
+      className={`${getVisibilityClass()} fixed top-0 z-20 flex w-full items-center justify-between bg-slate-50 px-6 md:px-12 xl:px-20`}
     >
       <button
         onClick={scrollToTop}
         aria-describedby="scroll to top"
-        className="outline-bright-red font-inconsolata text-4xl text-bright-red font-bold tracking-widest my-4"
+        className="my-4 font-inconsolata text-4xl font-bold tracking-widest text-bright-red outline-bright-red"
       >
         {"{silvia}"}
       </button>

@@ -107,9 +107,14 @@ export const ProjectsSection = () => {
   );
 
   return (
-    <section id="projectsSection" className="w-full flex flex-col items-center p-2 sm:p-6 md:px-14 bg-dark-slate">
-      <SectionTitle titleText="...projects" textColor="text-slate-50" fontWeight="font-medium" extraClass="2xl:px-28" />
-      <div className="flex flex-col items-stretch md:flex-row md:flex-wrap md:justify-evenly max-w-7xl">
+    <section id="projectsSection" className="flex w-full flex-col items-center bg-dark-slate p-2 sm:p-6 md:px-14">
+      <SectionTitle
+        titleText="...projects"
+        textColor="text-slate-50"
+        fontWeight="font-medium"
+        extraClass="sm:px-4 lg:px-16 2xl:px-28"
+      />
+      <div className="flex max-w-7xl flex-col items-stretch md:flex-row md:flex-wrap md:justify-evenly">
         {projectCards}
       </div>
     </section>
