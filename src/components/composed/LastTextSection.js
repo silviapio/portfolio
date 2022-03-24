@@ -5,7 +5,7 @@ import { BsFillLightningFill } from "react-icons/bs";
 
 export const LastTextSection = () => {
   const listItems = lastSectionBulletPoints.map((item, index) => (
-    <li key={index} className="flex flex-row items-start sm:text-lg my-2">
+    <li key={index} className="my-2 flex flex-row items-start sm:text-lg">
       <Icon className="mt-2 mr-2" color="var(--bright-red-text)" title="smile">
         <BsFillLightningFill />
       </Icon>
@@ -14,7 +14,7 @@ export const LastTextSection = () => {
   ));
 
   return (
-    <section className="my-8 px-4 md:mx-12 2xl:mx-36">
+    <section className="my-8 px-4 sm:mx-4 md:mx-12 lg:mx-24 2xl:mx-36">
       <SectionTitle titleText="...dulcis in fundo" />
       <p className="px-2 sm:text-lg">
         As much as I love writing, I couldn't let you leave without sharing some fun facts:

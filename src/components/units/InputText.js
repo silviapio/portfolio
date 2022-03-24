@@ -1,5 +1,5 @@
 import { Icon } from "./Icon";
-import { BiError } from "react-icons/bi";
+import { HiOutlineExclamation } from "react-icons/hi";
 
 export const InputText = ({
   id,
@@ -37,7 +37,7 @@ export const InputText = ({
           placeholder={placeholderText}
           onBlur={onBlur}
           onChange={onChange}
-          className={`rounded min-h-[120px] px-2 py-1 focus:outline-dark-slate ${
+          className={`min-h-[120px] rounded px-2 py-1 focus:outline-dark-slate ${
             hasError && "focus:outline-bright-red-text"
           }`}
         />
@@ -46,14 +46,14 @@ export const InputText = ({
   };
 
   return (
-    <div className="flex flex-col my-2 text-dark-slate">
+    <div className="my-2 flex flex-col text-dark-slate">
       <label className="font-semibold" htmlFor={id}>
         {labelText}
       </label>
       {inputField(type)}
       <div className={`${hasError ? "" : "hidden"} flex items-center text-bright-red-text`}>
-        <Icon title="error">
-          <BiError />
+        <Icon title="error" className="mt-0.5">
+          <HiOutlineExclamation />
         </Icon>
         <small className={`ml-1 text-base`}>{messageText}</small>
       </div>

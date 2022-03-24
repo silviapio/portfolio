@@ -1,9 +1,9 @@
 import { Icon } from "./Icon";
 import { HiHeart } from "react-icons/hi";
-import { BiCopyright } from "react-icons/bi";
+import { AiOutlineCopyright } from "react-icons/ai";
 
 export const Footer = () => (
-  <div className="flex flex-row justify-center items-center mt-auto font-inconsolata text-bright-red-text md:text-lg font-semibold">
+  <div className="mt-auto flex flex-row items-center justify-center font-inconsolata font-semibold text-bright-red-text md:text-lg">
     <p>coded with</p>
 
     <Icon className="mx-1">
@@ -13,8 +13,8 @@ export const Footer = () => (
     <p>by Silvia</p>
 
     <Icon className="mx-1">
-      <BiCopyright />
+      <AiOutlineCopyright />
     </Icon>
-    <p>2022 v1.2.0</p>
+    <p>2022 v1.2.1</p>
   </div>
 );
