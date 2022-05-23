@@ -19,8 +19,7 @@ export const Header = () => {
         window.removeEventListener("hashchange", hideMenuWhenNavigating);
       };
     }
-    // eslint-disable-next-line
-  }, [lastScrollY]);
+  }, [lastScrollY, controlMenu, hideMenuWhenNavigating]);
 
   const scrollToTop = () => {
     window.scrollTo(0, 0);

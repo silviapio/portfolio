@@ -31,8 +31,7 @@ export const Main = () => {
         window.addEventListener("hashchange", hideMenuWhenNavigating);
       };
     }
-    // eslint-disable-next-line
-  }, [lastScrollY]);
+  }, [lastScrollY, controlMenu, hideMenuWhenNavigating]);
 
   useEffect(() => {
     /* sets aria-hidden to hide burger menu content on loading */
@@ -61,7 +60,7 @@ export const Main = () => {
   };
 
   return (
-    <main className="flex flex-col mt-[72px] items-start text-dark-slate">
+    <main className="mt-[72px] flex flex-col items-start text-dark-slate">
       {isTabletOrLarger ? null : isContactDialogOpen || isJuniorDevModalOpen ? null : (
         <div className={getVisibilityClass()}>
           <BurgerMenu isVisible={showMenu} />
