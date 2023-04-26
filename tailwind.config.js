@@ -24,6 +24,8 @@ module.exports = {
         "c-gray": "var(--c-gray)",
         "mysql-blue": "var(--mysql-blue)",
         "figma-red": "var(--figma-red)",
+        "ts-blue": "var(--ts-blue)",
+        "jest-red": "var(--jest-red)",
       },
     },
   },

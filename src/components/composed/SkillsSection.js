@@ -14,6 +14,8 @@ import {
   SiC,
   SiMysql,
   SiFigma,
+  SiTypescript,
+  SiJest,
 } from "react-icons/si";
 
 export const SkillsSection = () => {
@@ -25,6 +27,14 @@ export const SkillsSection = () => {
       color: "dark-slate",
       textColor: "text-dark-slate",
       className: "bg-js-yellow font-semibold",
+    },
+    {
+      icon: SiTypescript,
+      skillText: "TypeScript",
+      altText: "TypeScript",
+      color: "light-slate",
+      textColor: "text-slate-50",
+      className: "bg-ts-blue font-medium",
     },
     {
       icon: SiGit,
@@ -75,12 +85,20 @@ export const SkillsSection = () => {
       className: "bg-css-blue font-medium",
     },
     {
+      icon: SiJest,
+      skillText: "Jest",
+      altText: "Jest",
+      color: "light-slate",
+      textColor: "text-slate-50",
+      className: "bg-jest-red font-medium",
+    },
+    {
       icon: SiStyledcomponents,
       skillText: "styled-components",
       altText: "styled-components",
       color: "dark-slate",
       textColor: "text-[#000000]",
-      className: "bg-styledcomp-pink font-semibold",
+      className: "bg-styledcomp-pink font-medium",
     },
     {
       icon: SiTailwindcss,

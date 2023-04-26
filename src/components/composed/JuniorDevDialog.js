@@ -44,19 +44,19 @@ export const JuniorDevDialog = ({ handleClose }) => {
       open={isOpen}
       onClose={close}
       initialFocus={topRef}
-      className="fixed z-30 inset-0 overflow-y-auto flex items-center sm:items-start justify-center"
+      className="fixed inset-0 z-30 flex items-center justify-center overflow-y-auto sm:items-start"
     >
-      <Dialog.Overlay className="fixed h-[120%] inset-0 bg-slate-800 opacity-90" />
-      <div className="flex items-center justify-center min-h-screen max-h-screen sm:max-w-2xl md:max-w-3xl xl:max-w-4xl">
+      <Dialog.Overlay className="fixed inset-0 h-[120%] bg-slate-800 opacity-90" />
+      <div className="flex max-h-screen min-h-screen items-center justify-center sm:max-w-2xl md:max-w-3xl xl:max-w-4xl">
         <div
           ref={topRef}
-          className="flex flex-col max-h-screen overflow-y-auto bg-slate-50 z-20 p-4 pl-5 sm:p-6 rounded-lg shadow-inner"
+          className="z-20 flex max-h-screen flex-col overflow-y-auto rounded-lg bg-slate-50 p-4 pl-5 shadow-inner sm:p-6"
         >
-          <Dialog.Title className="font-inconsolata text-lg text-bright-red-text font-semibold">
-            Here's why you should hire a Junior Dev (like me):
+          <Dialog.Title className="font-inconsolata text-lg font-semibold text-bright-red-text">
+            Here's why you should hire a Junior Dev:
           </Dialog.Title>
           <ul>{listItems1}</ul>
-          <p className="font-inconsolata text-lg text-bright-red-text font-semibold">
+          <p className="font-inconsolata text-lg font-semibold text-bright-red-text">
             Some bonus points if they're also career changers (yeah... Like me!):
           </p>
           <ul>{listItems2}</ul>
